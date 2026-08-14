@@ -1,0 +1,2178 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vansh Makvana - Full-Stack Developer & AI/ML Engineer Portfolio</title>
+    <meta name="description"
+        content="Portfolio of Vansh Makvana - a Full-Stack Developer and AI/ML Engineer specializing in modern web applications, machine learning, and mobile development.">
+    <meta name="keywords" content="developer, portfolio, full-stack, AI, ML, web developer, software engineer">
+    <meta name="author" content="Vansh Makvana">
+
+    <!-- ============ OPEN GRAPH & TWITTER META (Req 12) ============ -->
+    <!-- 🔧 CUSTOMIZE: Replace og:image URL, title, and description for LinkedIn/WhatsApp previews -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Vansh Makvana - Full-Stack Developer Portfolio">
+    <meta property="og:description"
+        content="Explore my projects, certifications, and experience in Full-Stack Development, AI/ML, and Mobile Apps.">
+    <meta property="og:image" content="https://Vanshmakvana.github.io/Vansh_Preview_Image.jpg">
+    <meta property="og:url" content="https://Vanshmakvana.github.io/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Vansh Makvana - Full-Stack Developer Portfolio">
+    <meta name="twitter:description" content="Explore my projects, certifications, and experience.">
+    <meta name="twitter:image" content="https://Vanshmakvana.github.io/Vansh_Preview_Image.jpg">
+
+    <!-- ============ CDN DEPENDENCIES ============ -->
+    <!-- Google Fonts: Inter + Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Swiper.js CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <!-- AOS - Animate On Scroll CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif'],
+                        poppins: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        'brand-dark': '#090d16',
+                        'brand-darker': '#060a11',
+                        'brand-card': 'rgba(15, 23, 42, 0.6)',
+                        'brand-blue': '#3b82f6',
+                        'brand-cyan': '#06b6d4',
+                        'brand-indigo': '#6366f1',
+                        'brand-purple': '#a855f7',
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'glow-pulse': 'glowPulse 3s ease-in-out infinite',
+                        'slide-up': 'slideUp 0.6s ease-out forwards',
+                        'gradient-x': 'gradientX 8s ease infinite',
+                        'spin-slow': 'spin 12s linear infinite',
+                        'bounce-gentle': 'bounceGentle 2s ease-in-out infinite',
+                        'shimmer': 'shimmer 2.5s linear infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        glowPulse: {
+                            '0%, 100%': { boxShadow: '0 0 20px rgba(59,130,246,0.3)' },
+                            '50%': { boxShadow: '0 0 40px rgba(59,130,246,0.6), 0 0 80px rgba(99,102,241,0.3)' },
+                        },
+                        slideUp: {
+                            '0%': { opacity: '0', transform: 'translateY(30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        gradientX: {
+                            '0%, 100%': { backgroundPosition: '0% 50%' },
+                            '50%': { backgroundPosition: '100% 50%' },
+                        },
+                        bounceGentle: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-6px)' },
+                        },
+                        shimmer: {
+                            '0%': { backgroundPosition: '-200% 0' },
+                            '100%': { backgroundPosition: '200% 0' },
+                        },
+                    },
+                },
+            },
+        }
+    </script>
+
+    <!-- ============ CUSTOM CSS MICRO-ANIMATIONS & GLASSMORPHISM ============ -->
+    <style>
+        /* ---------- BASE ---------- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #090d16;
+            color: #e2e8f0;
+            overflow-x: hidden;
+        }
+
+        body.light-mode {
+            background-color: #f1f5f9;
+            color: #1e293b;
+        }
+
+        ::selection {
+            background: rgba(59, 130, 246, 0.4);
+            color: #fff;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #090d16;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, #3b82f6, #6366f1);
+            border-radius: 10px;
+        }
+
+        body.light-mode ::-webkit-scrollbar-track {
+            background: #e2e8f0;
+        }
+
+        /* ---------- GLASSMORPHISM UTILITY ---------- */
+        .glass {
+            background: rgba(15, 23, 42, 0.55);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        body.light-mode .glass {
+            background: rgba(255, 255, 255, 0.7);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+        }
+
+        .glass-strong {
+            background: rgba(15, 23, 42, 0.75);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        body.light-mode .glass-strong {
+            background: rgba(255, 255, 255, 0.85);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        /* ---------- GRADIENT TEXT ---------- */
+        .gradient-text {
+            background: linear-gradient(135deg, #3b82f6, #06b6d4, #a855f7, #6366f1);
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradientX 8s ease infinite;
+        }
+
+        .gradient-border {
+            position: relative;
+        }
+
+        .gradient-border::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            padding: 1px;
+            background: linear-gradient(135deg, #3b82f6, #06b6d4, #a855f7);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+        }
+
+        /* ---------- AMBIENT BACKGROUND ORBS ---------- */
+        .orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.15;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        body.light-mode .orb {
+            opacity: 0.08;
+        }
+
+        /* ---------- CARD HOVER GLOW ---------- */
+        .card-hover {
+            transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.4s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-6px) scale(1.01);
+            box-shadow: 0 20px 60px rgba(59, 130, 246, 0.15), 0 0 0 1px rgba(59, 130, 246, 0.2);
+        }
+
+        /* ---------- TECH PILL ---------- */
+        .tech-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            padding: 4px 12px;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            background: rgba(59, 130, 246, 0.12);
+            color: #93c5fd;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .tech-pill:hover {
+            background: rgba(59, 130, 246, 0.25);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.2);
+        }
+
+        body.light-mode .tech-pill {
+            background: rgba(59, 130, 246, 0.1);
+            color: #2563eb;
+            border-color: rgba(59, 130, 246, 0.25);
+        }
+
+        /* ---------- TIMELINE ---------- */
+        .timeline-line {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, #3b82f6, #6366f1, #a855f7);
+            transform: translateX(-50%);
+        }
+
+        @media (max-width: 768px) {
+            .timeline-line {
+                left: 20px;
+            }
+        }
+
+        .timeline-dot {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #3b82f6, #6366f1);
+            border: 3px solid #090d16;
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+            z-index: 2;
+        }
+
+        body.light-mode .timeline-dot {
+            border-color: #f1f5f9;
+        }
+
+        /* ---------- YOUTUBE FACADE ---------- */
+        .yt-facade {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+            /* 16:9 */
+            background: #000;
+            border-radius: 0.75rem;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .yt-facade img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .yt-facade .play-btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 68px;
+            height: 48px;
+            background: rgba(255, 0, 0, 0.85);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .yt-facade:hover .play-btn {
+            background: #ff0000;
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+
+        .yt-facade .play-btn::after {
+            content: '';
+            display: block;
+            border-style: solid;
+            border-width: 10px 0 10px 18px;
+            border-color: transparent transparent transparent #fff;
+            margin-left: 3px;
+        }
+
+        /* ---------- LIGHTBOX MODAL ---------- */
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(8px);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .modal-content {
+            max-width: 90vw;
+            max-height: 90vh;
+            transform: scale(0.9);
+            transition: transform 0.3s ease;
+        }
+
+        .modal-overlay.active .modal-content {
+            transform: scale(1);
+        }
+
+        /* ---------- SHIMMER LOADING ---------- */
+        .shimmer-bg {
+            background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.05) 50%, transparent 100%);
+            background-size: 200% 100%;
+            animation: shimmer 2.5s linear infinite;
+        }
+
+        /* ---------- TYPING CURSOR ---------- */
+        .typing-cursor::after {
+            content: '|';
+            animation: blink 1s step-end infinite;
+            color: #3b82f6;
+            font-weight: 300;
+        }
+
+        @keyframes blink {
+            50% {
+                opacity: 0;
+            }
+        }
+
+        /* ---------- SECTION HEADINGS ---------- */
+        .section-heading {
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-heading::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            border-radius: 2px;
+            background: linear-gradient(90deg, #3b82f6, #a855f7);
+        }
+
+        /* ---------- LIGHT MODE OVERRIDES ---------- */
+        body.light-mode {
+            background-color: #f1f5f9;
+            color: #1e293b;
+        }
+
+        body.light-mode .text-gray-400 {
+            color: #64748b !important;
+        }
+
+        body.light-mode .text-gray-300 {
+            color: #475569 !important;
+        }
+
+        body.light-mode .text-white {
+            color: #1e293b !important;
+        }
+
+        body.light-mode .bg-brand-dark {
+            background-color: #f1f5f9 !important;
+        }
+
+        body.light-mode .border-gray-800 {
+            border-color: #e2e8f0 !important;
+        }
+
+        /* ---------- HERO PARTICLES (CSS only) ---------- */
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(59, 130, 246, 0.6);
+            border-radius: 50%;
+            animation: float 8s ease-in-out infinite;
+        }
+
+        /* ---------- SWIPER CUSTOM ---------- */
+        .swiper-button-next,
+        .swiper-button-prev {
+            color: #3b82f6 !important;
+        }
+
+        .swiper-pagination-bullet {
+            background: #3b82f6 !important;
+        }
+
+        .swiper-pagination-bullet-active {
+            background: #06b6d4 !important;
+        }
+
+        /* ---------- NAV ACTIVE INDICATOR ---------- */
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #3b82f6, #06b6d4);
+            transition: width 0.3s ease, left 0.3s ease;
+            border-radius: 2px;
+        }
+
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 100%;
+            left: 0;
+        }
+
+        /* ---------- RECRUITER BADGE ---------- */
+        .recruiter-badge {
+            position: fixed;
+            bottom: 100px;
+            right: 24px;
+            z-index: 1000;
+            animation: bounceGentle 2s ease-in-out infinite;
+        }
+
+        /* ---------- FILTER BUTTONS ---------- */
+        .filter-btn {
+            transition: all 0.3s ease;
+        }
+
+        .filter-btn.active {
+            background: linear-gradient(135deg, #3b82f6, #6366f1) !important;
+            color: #fff !important;
+            box-shadow: 0 4px 20px rgba(59, 130, 246, 0.4);
+        }
+    </style>
+</head>
+
+<body class="bg-brand-dark font-inter antialiased">
+
+    <!-- ================================================================ -->
+    <!--                        NAVBAR (Sticky Glass)                      -->
+    <!-- ================================================================ -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-[100] transition-all duration-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 md:h-20">
+                <!-- Logo -->
+                <a href="#hero" class="flex items-center gap-2 group">
+                    <div
+                        class="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-white font-bold text-lg group-hover:scale-110 transition-transform">
+                        <!-- 🔧 CUSTOMIZE: Replace with your initials -->
+                        VM
+                    </div>
+                    <span class="text-white font-poppins font-bold text-lg hidden sm:block">
+                        <!-- 🔧 CUSTOMIZE: Replace with your name -->
+                        <span class="gradient-text">Vansh Makvana</span>
+                    </span>
+                </a>
+
+                <!-- Desktop Nav Links -->
+                <div class="hidden md:flex items-center gap-6 lg:gap-8">
+                    <a href="#about" class="nav-link text-gray-300 hover:text-white text-sm font-medium">About</a>
+                    <a href="#profiles" class="nav-link text-gray-300 hover:text-white text-sm font-medium">Profiles</a>
+                    <a href="#experience"
+                        class="nav-link text-gray-300 hover:text-white text-sm font-medium">Experience</a>
+                    <a href="#projects" class="nav-link text-gray-300 hover:text-white text-sm font-medium">Projects</a>
+                    <a href="#visits" class="nav-link text-gray-300 hover:text-white text-sm font-medium">Gallery</a>
+                    <a href="#certificates"
+                        class="nav-link text-gray-300 hover:text-white text-sm font-medium">Certificates</a>
+                    <a href="#contact" class="nav-link text-gray-300 hover:text-white text-sm font-medium">Contact</a>
+                </div>
+
+                <!-- Right Controls -->
+                <div class="flex items-center gap-3">
+                    <!-- Theme Toggle -->
+                    <button id="themeToggle"
+                        class="w-10 h-10 rounded-full glass flex items-center justify-center text-gray-300 hover:text-white transition-colors"
+                        aria-label="Toggle theme">
+                        <i class="fas fa-moon text-sm" id="themeIcon"></i>
+                    </button>
+                    <!-- Mobile Hamburger -->
+                    <button id="mobileMenuBtn"
+                        class="md:hidden w-10 h-10 rounded-full glass flex items-center justify-center text-gray-300 hover:text-white transition-colors"
+                        aria-label="Toggle menu">
+                        <i class="fas fa-bars text-sm"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="md:hidden hidden glass-strong mx-4 mb-4 rounded-2xl overflow-hidden">
+            <div class="flex flex-col p-4 gap-2">
+                <a href="#about"
+                    class="mobile-nav-link px-4 py-3 rounded-xl text-gray-300 hover:text-white hover:bg-white/5 transition-all text-sm font-medium">About</a>
+                <a href="#profiles"
+                    class="mobile-nav-link px-4 py-3 rounded-xl text-gray-300 hover:text-white hover:bg-white/5 transition-all text-sm font-medium">Profiles</a>
+                <a href="#experience"
+                    class="mobile-nav-link px-4 py-3 rounded-xl text-gray-300 hover:text-white hover:bg-white/5 transition-all text-sm font-medium">Experience</a>
+                <a href="#projects"
+                    class="mobile-nav-link px-4 py-3 rounded-xl text-gray-300 hover:text-white hover:bg-white/5 transition-all text-sm font-medium">Projects</a>
+                <a href="#visits"
+                    class="mobile-nav-link px-4 py-3 rounded-xl text-gray-300 hover:text-white hover:bg-white/5 transition-all text-sm font-medium">Gallery</a>
+                <a href="#certificates"
+                    class="mobile-nav-link px-4 py-3 rounded-xl text-gray-300 hover:text-white hover:bg-white/5 transition-all text-sm font-medium">Certificates</a>
+                <a href="#contact"
+                    class="mobile-nav-link px-4 py-3 rounded-xl text-gray-300 hover:text-white hover:bg-white/5 transition-all text-sm font-medium">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ================================================================ -->
+    <!--                          HERO SECTION                             -->
+    <!-- ================================================================ -->
+    <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+        <!-- Ambient Orbs -->
+        <div class="orb w-[500px] h-[500px] bg-blue-600 -top-40 -left-40" style="position:absolute;"></div>
+        <div class="orb w-[400px] h-[400px] bg-indigo-600 top-1/2 -right-32" style="position:absolute;"></div>
+        <div class="orb w-[300px] h-[300px] bg-cyan-500 bottom-0 left-1/3" style="position:absolute;"></div>
+
+        <!-- Floating Particles (CSS-only) -->
+        <div class="particle" style="top:15%;left:10%;animation-delay:0s;"></div>
+        <div class="particle" style="top:25%;left:80%;animation-delay:1s;width:6px;height:6px;"></div>
+        <div class="particle"
+            style="top:60%;left:20%;animation-delay:2s;width:3px;height:3px;background:rgba(99,102,241,0.6);"></div>
+        <div class="particle"
+            style="top:70%;left:70%;animation-delay:3s;width:5px;height:5px;background:rgba(6,182,212,0.6);"></div>
+        <div class="particle" style="top:40%;left:50%;animation-delay:4s;"></div>
+
+        <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center">
+            <!-- Status Badge -->
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-gray-300 mb-8"
+                data-aos="fade-down" data-aos-delay="100">
+                <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+                Open to Opportunities
+            </div>
+
+            <!-- Main Headline -->
+            <h1 class="font-poppins font-extrabold text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white leading-tight mb-6"
+                data-aos="fade-up" data-aos-delay="200">
+                Hi, I'm
+                <!-- 🔧 CUSTOMIZE: Replace with your name -->
+                <span class="gradient-text"> Vansh Makvana</span>
+                <br>
+                <span class="text-3xl sm:text-4xl md:text-5xl lg:text-5xl" id="heroTyping"></span>
+                <span class="typing-cursor"></span>
+            </h1>
+
+            <!-- Subheadline -->
+            <p class="text-gray-400 text-base sm:text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed"
+                data-aos="fade-up" data-aos-delay="300">
+                <!-- 🔧 CUSTOMIZE: Your professional summary -->
+                A passionate <strong class="text-gray-200">Web Developer</strong> &amp; <strong
+                    class="text-gray-200">AI/ML Enthusiast</strong> crafting performant web applications, intelligent
+                systems, and mobile experiences that solve real-world problems.
+            </p>
+
+            <!-- CTA Buttons -->
+            <div class="flex flex-wrap items-center justify-center gap-4 mb-12" data-aos="fade-up" data-aos-delay="400">
+                <a href="#projects"
+                    class="group relative inline-flex items-center gap-2 px-8 py-4 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold text-sm overflow-hidden transition-all hover:shadow-[0_0_40px_rgba(59,130,246,0.4)] hover:scale-105">
+                    <span class="relative z-10"><i class="fas fa-rocket mr-2"></i>Explore Projects</span>
+                </a>
+                <!-- 🔧 CUSTOMIZE: Replace with your actual resume link (Google Drive / GitHub raw link) -->
+                <a href="https://drive.google.com/file/d/1xV_uEqMQgBq452G00ttZtLMa4uvWUXQI/view?usp=sharing"
+                    target="_blank" rel="noopener"
+                    class="inline-flex items-center gap-2 px-8 py-4 rounded-2xl glass text-white font-semibold text-sm hover:bg-white/10 transition-all hover:scale-105">
+                    <i class="fas fa-download mr-2"></i>Download Resume
+                </a>
+            </div>
+
+            <!-- Live Tech Badges -->
+            <div class="flex flex-wrap items-center justify-center gap-2 max-w-2xl mx-auto" data-aos="fade-up"
+                data-aos-delay="500">
+                <!-- 🔧 CUSTOMIZE: Replace with your actual skills -->
+                <span class="tech-pill"><i class="fab fa-java"></i> Java</span>
+                <span class="tech-pill"><i class="fab fa-javascript"></i> Javascript</span>
+                <span class="tech-pill"><i class="fab fa-node-js"></i> Node.js</span>
+                <span class="tech-pill"><i class="fab fa-Basic-python"></i> Basic Python</span>
+                <span class="tech-pill"><i class="fab fa-php"></i> PHP</span>
+                <span class="tech-pill"><i class="fab fa-c"></i> C</span>
+                <span class="tech-pill"><i class="fab fa-css"></i> CSS</span>
+                <span class="tech-pill"><i class="fab fa-html"></i> HTML</span>
+                <span class="tech-pill"><i class="fab fa-bootstrap"></i> Bootstrap</span>
+                <span class="tech-pill"><i class="fas fa-database"></i> MongoDB</span>
+                <span class="tech-pill"><i class="fab fa-mysql"></i> MySQL</span>
+                <span class="tech-pill"><i class="fab fa-git-alt"></i> Git</span>
+                <span class="tech-pill"><i class="fas fa-fire"></i> Firebase</span>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-gray-500 text-xs">
+            <span>Scroll Down</span>
+            <div class="w-5 h-8 border-2 border-gray-600 rounded-full flex items-start justify-center p-1">
+                <div class="w-1 h-2 bg-blue-500 rounded-full animate-bounce"></div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ================================================================ -->
+    <!--                  ABOUT ME & INTERESTS (Req 9)                     -->
+    <!-- ================================================================ -->
+    <section id="about" class="relative py-24 md:py-32">
+        <div class="orb w-[350px] h-[350px] bg-purple-600 -top-20 right-0" style="position:absolute;"></div>
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-16">
+                <p class="text-blue-400 font-medium text-sm tracking-wider uppercase mb-3" data-aos="fade-up">Get to
+                    Know Me</p>
+                <h2 class="section-heading font-poppins font-bold text-3xl sm:text-4xl text-white" data-aos="fade-up"
+                    data-aos-delay="100">
+                    About <span class="gradient-text">Me</span>
+                </h2>
+            </div>
+
+            <div class="grid lg:grid-cols-5 gap-10 items-start">
+                <!-- Photo Card -->
+                <div class="lg:col-span-2 flex justify-center" data-aos="fade-right" data-aos-delay="200">
+                    <div class="relative group">
+                        <div
+                            class="absolute -inset-1 bg-gradient-to-br from-blue-600 to-purple-600 rounded-3xl blur-lg opacity-40 group-hover:opacity-60 transition-opacity">
+                        </div>
+                        <div
+                            class="relative w-64 h-80 sm:w-72 sm:h-96 rounded-3xl overflow-hidden border-2 border-white/10">
+                            <!-- 🔧 CUSTOMIZE: Replace with your profile photo URL -->
+                            <img src="./Vansh_Preview_Image.jpg" alt="Profile Photo" class="w-full h-full object-cover"
+                                loading="lazy" decoding="async" onerror="this.src='https://placehold.co/600x400'">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bio Content -->
+                <div class="lg:col-span-3" data-aos="fade-left" data-aos-delay="300">
+                    <h3 class="font-poppins font-bold text-2xl text-white mb-4">
+                        <!-- 🔧 CUSTOMIZE: Your tagline -->
+                        Passionate Developer & Lifelong Learner
+                    </h3>
+                    <p class="text-gray-400 leading-relaxed mb-4">
+                        <!-- 🔧 CUSTOMIZE: Your bio paragraph 1 -->
+                        I'm a final-year Information Technology Engineering student with a deep passion for building
+                        elegant, scalable
+                        software solutions. My journey in tech started with curiosity about how things work and has
+                        evolved into a relentless drive to create impactful applications using modern frameworks and AI
+                        technologies.
+                    </p>
+                    <p class="text-gray-400 leading-relaxed mb-4">
+                        <!-- 🔧 CUSTOMIZE: Your bio paragraph 2 -->
+                        I thrive on solving complex algorithmic challenges and translating business requirements into
+                        clean, maintainable code. With hands-on experience in full-stack web development, machine
+                        learning, and mobile app development, I bring a versatile skill set to every project I
+                        undertake.
+                    </p>
+
+                    <!-- Expandable Read More -->
+                    <div id="readMoreContent"
+                        class="hidden text-gray-400 leading-relaxed mb-4 transition-all duration-500">
+                        <!-- 🔧 CUSTOMIZE: Additional bio content -->
+                        <p class="mb-4">Beyond coding, I'm actively involved in open-source contributions, tech
+                            community events, and mentoring junior developers. I believe in continuous learning and
+                            regularly participate in hackathons and competitive programming contests to sharpen my
+                            problem-solving skills.</p>
+                        <p>My career goal is to work at the intersection of software engineering and artificial
+                            intelligence, building products that leverage data-driven insights to improve user
+                            experiences at scale.</p>
+                    </div>
+                    <button onclick="toggleReadMore()" id="readMoreBtn"
+                        class="text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors mb-6">
+                        <i class="fas fa-chevron-down mr-1 transition-transform" id="readMoreIcon"></i> Read More
+                    </button>
+
+                    <!-- Interest Tags -->
+                    <div class="flex flex-wrap gap-3 mt-4">
+                        <!-- 🔧 CUSTOMIZE: Your interests -->
+                        <div class="glass px-4 py-2 rounded-xl text-sm text-gray-300 flex items-center gap-2"><i
+                                class="fas fa-code text-blue-400"></i> Full Stack Development</div>
+                        <div class="glass px-4 py-2 rounded-xl text-sm text-gray-300 flex items-center gap-2"><i
+                                class="fas fa-code text-blue-400"></i> Front-End Development</div>
+                        <div class="glass px-4 py-2 rounded-xl text-sm text-gray-300 flex items-center gap-2"><i
+                                class="fas fa-code text-blue-400"></i> Back-End Development</div>
+                        <div class="glass px-4 py-2 rounded-xl text-sm text-gray-300 flex items-center gap-2"><i
+                                class="fas fa-robot text-cyan-400"></i> AI / ML</div>
+                        <div class="glass px-4 py-2 rounded-xl text-sm text-gray-300 flex items-center gap-2"><i
+                                class="fas fa-mobile-alt text-purple-400"></i> Mobile Apps Development</div>
+                        <div class="glass px-4 py-2 rounded-xl text-sm text-gray-300 flex items-center gap-2"><i
+                                class="fas fa-cloud text-indigo-400"></i> Cloud / DevOps</div>
+                        <div class="glass px-4 py-2 rounded-xl text-sm text-gray-300 flex items-center gap-2"><i
+                                class="fas fa-trophy text-yellow-400"></i> Competitive Programming</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ================================================================ -->
+    <!--               PROFILES & CODING BADGES (Req 6)                    -->
+    <!-- ================================================================ -->
+    <section id="profiles" class="relative py-24 md:py-32">
+        <div class="orb w-[400px] h-[400px] bg-cyan-600 top-1/2 -left-40" style="position:absolute;"></div>
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-16">
+                <p class="text-blue-400 font-medium text-sm tracking-wider uppercase mb-3" data-aos="fade-up">My Online
+                    Presence</p>
+                <h2 class="section-heading font-poppins font-bold text-3xl sm:text-4xl text-white" data-aos="fade-up"
+                    data-aos-delay="100">
+                    Profiles & <span class="gradient-text">Badges</span>
+                </h2>
+            </div>
+
+            <!-- Profile Cards -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                <!-- GitHub Card -->
+                <a href="https://github.com/Vanshmakvana" target="_blank" rel="noopener"
+                    class="glass rounded-2xl p-6 card-hover group" data-aos="fade-up" data-aos-delay="100">
+                    <!-- 🔧 CUSTOMIZE: Replace YOUR_USERNAME in the href above -->
+                    <div class="flex items-center gap-4 mb-4">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-gray-800 flex items-center justify-center group-hover:bg-gray-700 transition-colors">
+                            <i class="fab fa-github text-2xl text-white"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-white font-semibold">GitHub</h3>
+                            <p class="text-gray-400 text-sm">Vanshmakvana</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 text-sm mb-3">Open-source contributions, projects & code repositories</p>
+                    <div class="flex items-center text-blue-400 text-sm font-medium">
+                        View Profile <i
+                            class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </a>
+
+                <!-- LinkedIn Card -->
+                <a href="https://linkedin.com/in/vansh-makvana17" target="_blank" rel="noopener"
+                    class="glass rounded-2xl p-6 card-hover group" data-aos="fade-up" data-aos-delay="200">
+                    <!-- 🔧 CUSTOMIZE: Replace YOUR_USERNAME in the href above -->
+                    <div class="flex items-center gap-4 mb-4">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-blue-900/50 flex items-center justify-center group-hover:bg-blue-800/50 transition-colors">
+                            <i class="fab fa-linkedin-in text-2xl text-blue-400"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-white font-semibold">LinkedIn</h3>
+                            <p class="text-gray-400 text-sm">Vansh-Makvana17</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 text-sm mb-3">Professional network, endorsements & recommendations</p>
+                    <div class="flex items-center text-blue-400 text-sm font-medium">
+                        Connect <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </a>
+
+                <!-- LeetCode Card -->
+                <a href="https://leetcode.com/u/VANSH_MAKVANA/" target="_blank" rel="noopener"
+                    class="glass rounded-2xl p-6 card-hover group" data-aos="fade-up" data-aos-delay="300">
+                    <!-- 🔧 CUSTOMIZE: Replace YOUR_USERNAME in the href above -->
+                    <div class="flex items-center gap-4 mb-4">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-yellow-900/30 flex items-center justify-center group-hover:bg-yellow-800/30 transition-colors">
+                            <i class="fas fa-code text-2xl text-yellow-400"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-white font-semibold">LeetCode</h3>
+                            <p class="text-gray-400 text-sm">VANSH_MAKVANA</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 text-sm mb-3">DSA problem solving, contest ratings & streaks</p>
+                    <div class="flex items-center text-blue-400 text-sm font-medium">
+                        View Stats <i
+                            class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </a>
+            </div>
+
+            <!-- GitHub Stats Embed Cards -->
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- 🔧 CUSTOMIZE: Replace YOUR_USERNAME in the img src URLs below -->
+                <div class="glass rounded-2xl p-4 text-center" data-aos="fade-up" data-aos-delay="400">
+                    <img src="https://github-readme-stats.vercel.app/api?username=Vanshmakvana&show_icons=true&theme=tokyonight&hide_border=true&bg_color=00000000&text_color=94a3b8&title_color=3b82f6&icon_color=06b6d4"
+                        alt="GitHub Stats" class="mx-auto max-w-full" loading="lazy" decoding="async"
+                        onerror="this.parentElement.innerHTML='<p class=\'text-gray-500 py-8\'>GitHub Stats Unavailable</p>'">
+                </div>
+                <div class="glass rounded-2xl p-4 text-center" data-aos="fade-up" data-aos-delay="500">
+                    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Vanshmakvana&layout=compact&theme=tokyonight&hide_border=true&bg_color=00000000&text_color=94a3b8&title_color=3b82f6"
+                        alt="Top Languages" class="mx-auto max-w-full" loading="lazy" decoding="async"
+                        onerror="this.parentElement.innerHTML='<p class=\'text-gray-500 py-8\'>Language Stats Unavailable</p>'">
+                </div>
+            </div>
+
+            <!-- LeetCode Stats -->
+            <div class="mt-6 glass rounded-2xl p-4 text-center" data-aos="fade-up" data-aos-delay="600">
+                <!-- 🔧 CUSTOMIZE: Replace YOUR_USERNAME -->
+                <img src="https://leetcard.jacoblin.cool/VANSH_MAKVANA?theme=dark&font=Inter&ext=png"
+                    alt="LeetCode Stats" class="mx-auto max-w-full" loading="lazy" decoding="async"
+                    onerror="this.parentElement.innerHTML='<p class=\'text-gray-500 py-8\'>LeetCode Stats Unavailable — <a href=\'https://leetcode.com/VANSH_MAKVANA\' target=\'_blank\' class=\'text-blue-400\'>View Profile</a></p>'">
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ================================================================ -->
+    <!--            EXPERIENCE & INTERNSHIPS TIMELINE (Req 11)             -->
+    <!-- ================================================================ -->
+    <section id="experience" class="relative py-24 md:py-32">
+        <div class="orb w-[350px] h-[350px] bg-indigo-600 top-20 right-0" style="position:absolute;"></div>
+        <div class="max-w-5xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-16">
+                <p class="text-blue-400 font-medium text-sm tracking-wider uppercase mb-3" data-aos="fade-up">My Journey
+                </p>
+                <h2 class="section-heading font-poppins font-bold text-3xl sm:text-4xl text-white" data-aos="fade-up"
+                    data-aos-delay="100">
+                    Experience & <span class="gradient-text">Internships</span>
+                </h2>
+            </div>
+
+            <!-- Timeline -->
+            <div class="relative">
+                <div class="timeline-line hidden md:block"></div>
+
+                <!-- Timeline Entry 1 (Right) -->
+                <!-- 🔧 CUSTOMIZE: Replace all company/role/date/achievement details below -->
+                <div class="relative flex flex-col md:flex-row items-center mb-12" data-aos="fade-up">
+                    <div class="hidden md:block md:w-1/2"></div>
+                    <div class="absolute left-[20px] md:left-1/2 md:-translate-x-1/2 timeline-dot"></div>
+                    <div class="md:w-1/2 ml-12 md:ml-0 md:pl-12">
+                        <div class="glass rounded-2xl p-6 card-hover">
+                            <div class="flex items-center gap-2 mb-2">
+                                <span
+                                    class="px-3 py-1 rounded-full bg-green-500/20 text-green-400 text-xs font-medium">Ongoing</span>
+                                <span class="text-gray-500 text-xs">May 2026 - Present</span>
+                            </div>
+                            <h3 class="text-white font-bold text-lg mb-1">Web Development Intern</h3>
+                            <p class="text-blue-400 font-medium text-sm mb-3">Infotact Solutions, Bangalore, India</p>
+                            <ul class="text-gray-400 text-sm space-y-1 mb-4">
+                                <li>• Developed responsive web applications using React and Node.js</li>
+                                <li>• Implemented RESTful APIs and integrated third-party services</li>
+                                <li>• Optimized application performance and user experience</li>
+                            </ul>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="tech-pill text-xs">React</span>
+                                <span class="tech-pill text-xs">Node.js</span>
+                                <span class="tech-pill text-xs">MongoDB</span>
+                                <span class="tech-pill text-xs">Express.js</span>
+                                <span class="tech-pill text-xs">Tailwind CSS</span>
+                                <span class="tech-pill text-xs">Git</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline Entry 2 (Left) -->
+                <div class="relative flex flex-col md:flex-row items-center mb-12" data-aos="fade-up"
+                    data-aos-delay="100">
+                    <div class="md:w-1/2 md:pr-12 ml-12 md:ml-0 order-2 md:order-1">
+                        <div class="glass rounded-2xl p-6 card-hover">
+                            <div class="flex items-center gap-2 mb-2">
+                                <span
+                                    class="px-3 py-1 rounded-full bg-blue-500/20 text-blue-400 text-xs font-medium">Completed</span>
+                                <span class="text-gray-500 text-xs">Jan 2026 - May 2026</span>
+                            </div>
+                            <h3 class="text-white font-bold text-lg mb-1">Full-Stack Developer Intern</h3>
+                            <p class="text-blue-400 font-medium text-sm mb-3">Microsoft - Remote</p>
+                            <ul class="text-gray-400 text-sm space-y-1 mb-4">
+                                <li>• Developed a real-time collaboration feature used by 50K+ users</li>
+                                <li>• Implemented OAuth 2.0 authentication with Azure AD integration</li>
+                                <li>• Wrote 200+ unit/integration tests achieving 95% code coverage</li>
+                            </ul>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="tech-pill text-xs">React</span>
+                                <span class="tech-pill text-xs">TypeScript</span>
+                                <span class="tech-pill text-xs">Azure</span>
+                                <span class="tech-pill text-xs">C#</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute left-[20px] md:left-1/2 md:-translate-x-1/2 timeline-dot order-1 md:order-2">
+                    </div>
+                    <div class="hidden md:block md:w-1/2 order-3"></div>
+                </div>
+
+                <!-- Timeline Entry 3 (Right) -->
+                <div class="relative flex flex-col md:flex-row items-center mb-12" data-aos="fade-up"
+                    data-aos-delay="200">
+                    <div class="hidden md:block md:w-1/2"></div>
+                    <div class="absolute left-[20px] md:left-1/2 md:-translate-x-1/2 timeline-dot"></div>
+                    <div class="md:w-1/2 ml-12 md:ml-0 md:pl-12">
+                        <div class="glass rounded-2xl p-6 card-hover">
+                            <div class="flex items-center gap-2 mb-2">
+                                <span
+                                    class="px-3 py-1 rounded-full bg-blue-500/20 text-blue-400 text-xs font-medium">Completed</span>
+                                <span class="text-gray-500 text-xs">Jul 2025 - Dec 2025</span>
+                            </div>
+                            <h3 class="text-white font-bold text-lg mb-1">AI/ML Research Intern</h3>
+                            <p class="text-blue-400 font-medium text-sm mb-3">IIT Research Lab - Hyderabad</p>
+                            <ul class="text-gray-400 text-sm space-y-1 mb-4">
+                                <li>• Published a research paper on transformer-based NLP at a Tier-1 conference</li>
+                                <li>• Built a custom dataset pipeline processing 2TB+ of unstructured data</li>
+                                <li>• Achieved 92% accuracy on a novel text classification benchmark</li>
+                            </ul>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="tech-pill text-xs">Python</span>
+                                <span class="tech-pill text-xs">PyTorch</span>
+                                <span class="tech-pill text-xs">HuggingFace</span>
+                                <span class="tech-pill text-xs">CUDA</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ================================================================ -->
+    <!--          FEATURED PROJECTS SHOWCASE (Req 1, 2, 3, 4, 8)           -->
+    <!-- ================================================================ -->
+    <section id="projects" class="relative py-24 md:py-32">
+        <div class="orb w-[400px] h-[400px] bg-blue-600 bottom-0 -left-32" style="position:absolute;"></div>
+        <div class="orb w-[300px] h-[300px] bg-purple-600 top-40 right-0" style="position:absolute;"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-12">
+                <p class="text-blue-400 font-medium text-sm tracking-wider uppercase mb-3" data-aos="fade-up">What I've
+                    Built</p>
+                <h2 class="section-heading font-poppins font-bold text-3xl sm:text-4xl text-white" data-aos="fade-up"
+                    data-aos-delay="100">
+                    Featured <span class="gradient-text">Projects</span>
+                </h2>
+            </div>
+
+            <!-- Search & Filter Bar (Req 12) -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10" data-aos="fade-up"
+                data-aos-delay="200">
+                <!-- Keyword Search -->
+                <div class="relative w-full sm:w-80">
+                    <i class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 text-sm"></i>
+                    <input type="text" id="projectSearch" placeholder="Search projects by keyword..."
+                        class="w-full pl-11 pr-4 py-3 rounded-xl glass text-sm text-white placeholder-gray-500 outline-none focus:ring-2 focus:ring-blue-500/50 transition-all bg-transparent">
+                </div>
+                <!-- Category Filters -->
+                <div class="flex flex-wrap items-center gap-2">
+                    <button
+                        class="filter-btn active glass px-4 py-2 rounded-xl text-sm text-gray-300 hover:text-white transition-all"
+                        data-filter="all" onclick="filterProjects('all', this)">All</button>
+                    <button
+                        class="filter-btn glass px-4 py-2 rounded-xl text-sm text-gray-300 hover:text-white transition-all"
+                        data-filter="web" onclick="filterProjects('web', this)">Web Dev</button>
+                    <button
+                        class="filter-btn glass px-4 py-2 rounded-xl text-sm text-gray-300 hover:text-white transition-all"
+                        data-filter="ai" onclick="filterProjects('ai', this)">AI / ML</button>
+                    <button
+                        class="filter-btn glass px-4 py-2 rounded-xl text-sm text-gray-300 hover:text-white transition-all"
+                        data-filter="mobile" onclick="filterProjects('mobile', this)">Mobile</button>
+                </div>
+            </div>
+
+            <!-- Project Grid -->
+            <div id="projectGrid" class="grid md:grid-cols-2 gap-8">
+
+                <!-- ===== PROJECT CARD 1 ===== -->
+                <!-- 🔧 CUSTOMIZE: Replace ALL placeholder data in each project card -->
+                <div class="project-card glass rounded-2xl overflow-hidden card-hover" data-category="web"
+                    data-keywords="ecommerce react node marketplace" data-aos="fade-up">
+                    <!-- Image Carousel (Req 3 & 4) -->
+                    <div class="swiper project-swiper h-56 sm:h-64">
+                        <div class="swiper-wrapper">
+                            <!-- 🔧 CUSTOMIZE: Replace image URLs -->
+                            <div class="swiper-slide">
+                                <img src="https://via.placeholder.com/800x400/1e293b/3b82f6?text=Project+1+Screenshot+1"
+                                    alt="Project 1 - Screenshot 1" class="w-full h-full object-cover" loading="lazy"
+                                    decoding="async"
+                                    onerror="this.src='https://via.placeholder.com/800x400/1e293b/64748b?text=Image+Unavailable'">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="https://via.placeholder.com/800x400/1e293b/06b6d4?text=Project+1+Screenshot+2"
+                                    alt="Project 1 - Screenshot 2" class="w-full h-full object-cover" loading="lazy"
+                                    decoding="async"
+                                    onerror="this.src='https://via.placeholder.com/800x400/1e293b/64748b?text=Image+Unavailable'">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="https://via.placeholder.com/800x400/1e293b/a855f7?text=Project+1+Screenshot+3"
+                                    alt="Project 1 - Screenshot 3" class="w-full h-full object-cover" loading="lazy"
+                                    decoding="async"
+                                    onerror="this.src='https://via.placeholder.com/800x400/1e293b/64748b?text=Image+Unavailable'">
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="px-3 py-1 rounded-full bg-blue-500/15 text-blue-400 text-xs font-medium">Web
+                                Dev</span>
+                            <div class="flex items-center gap-3">
+                                <!-- 🔧 CUSTOMIZE: GitHub repo link -->
+                                <a href="https://github.com/YOUR_USERNAME/project1" target="_blank" rel="noopener"
+                                    class="text-gray-400 hover:text-white transition-colors" title="Source Code"><i
+                                        class="fab fa-github"></i></a>
+                                <!-- 🔧 CUSTOMIZE: Live demo link -->
+                                <a href="https://your-project1-demo.vercel.app" target="_blank" rel="noopener"
+                                    class="text-gray-400 hover:text-blue-400 transition-colors" title="Live Demo"><i
+                                        class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                        <h3 class="text-white font-bold text-xl mb-2">AI-Powered E-Commerce Platform</h3>
+                        <p class="text-gray-400 text-sm mb-4 line-clamp-2">A full-stack marketplace with AI product
+                            recommendations, real-time inventory management, Stripe payments, and an admin analytics
+                            dashboard.</p>
+
+                        <!-- Tech Stack Tags -->
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="tech-pill text-xs">React</span>
+                            <span class="tech-pill text-xs">Node.js</span>
+                            <span class="tech-pill text-xs">MongoDB</span>
+                            <span class="tech-pill text-xs">Stripe</span>
+                        </div>
+
+                        <!-- Action Buttons -->
+                        <div class="flex flex-wrap gap-2">
+                            <!-- YouTube Video Button (Req 1) - Facade Pattern -->
+                            <!-- 🔧 CUSTOMIZE: Replace YOUR_YOUTUBE_VIDEO_ID_1 -->
+                            <button onclick="openVideoModal('YOUR_YOUTUBE_VIDEO_ID_1')"
+                                class="flex items-center gap-2 px-3 py-2 rounded-lg bg-red-500/15 text-red-400 text-xs font-medium hover:bg-red-500/25 transition-colors">
+                                <i class="fab fa-youtube"></i> Watch Demo
+                            </button>
+                            <!-- Document/PDF Button (Req 2) -->
+                            <!-- 🔧 CUSTOMIZE: Replace with your Google Drive / cloud link to the PDF -->
+                            <a href="https://drive.google.com/YOUR_PDF_LINK_1" target="_blank" rel="noopener"
+                                class="flex items-center gap-2 px-3 py-2 rounded-lg bg-green-500/15 text-green-400 text-xs font-medium hover:bg-green-500/25 transition-colors">
+                                <i class="fas fa-file-pdf"></i> View Report
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ===== PROJECT CARD 2 ===== -->
+                <div class="project-card glass rounded-2xl overflow-hidden card-hover" data-category="ai"
+                    data-keywords="machine learning nlp chatbot transformer" data-aos="fade-up" data-aos-delay="100">
+                    <div class="swiper project-swiper h-56 sm:h-64">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="https://via.placeholder.com/800x400/1e293b/06b6d4?text=AI+Chatbot+Screenshot+1"
+                                    alt="Project 2 - Screenshot 1" class="w-full h-full object-cover" loading="lazy"
+                                    decoding="async"
+                                    onerror="this.src='https://via.placeholder.com/800x400/1e293b/64748b?text=Image+Unavailable'">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="https://via.placeholder.com/800x400/1e293b/a855f7?text=AI+Chatbot+Screenshot+2"
+                                    alt="Project 2 - Screenshot 2" class="w-full h-full object-cover" loading="lazy"
+                                    decoding="async"
+                                    onerror="this.src='https://via.placeholder.com/800x400/1e293b/64748b?text=Image+Unavailable'">
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="px-3 py-1 rounded-full bg-cyan-500/15 text-cyan-400 text-xs font-medium">AI /
+                                ML</span>
+                            <div class="flex items-center gap-3">
+                                <a href="https://github.com/YOUR_USERNAME/project2" target="_blank" rel="noopener"
+                                    class="text-gray-400 hover:text-white transition-colors"><i
+                                        class="fab fa-github"></i></a>
+                                <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors"><i
+                                        class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                        <h3 class="text-white font-bold text-xl mb-2">Intelligent Customer Support Chatbot</h3>
+                        <p class="text-gray-400 text-sm mb-4 line-clamp-2">A transformer-based NLP chatbot with
+                            context-aware responses, sentiment analysis, and multi-language support deployed on AWS
+                            Lambda.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="tech-pill text-xs">Python</span>
+                            <span class="tech-pill text-xs">PyTorch</span>
+                            <span class="tech-pill text-xs">FastAPI</span>
+                            <span class="tech-pill text-xs">AWS</span>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <button onclick="openVideoModal('YOUR_YOUTUBE_VIDEO_ID_2')"
+                                class="flex items-center gap-2 px-3 py-2 rounded-lg bg-red-500/15 text-red-400 text-xs font-medium hover:bg-red-500/25 transition-colors">
+                                <i class="fab fa-youtube"></i> Watch Demo
+                            </button>
+                            <a href="https://drive.google.com/YOUR_PDF_LINK_2" target="_blank" rel="noopener"
+                                class="flex items-center gap-2 px-3 py-2 rounded-lg bg-green-500/15 text-green-400 text-xs font-medium hover:bg-green-500/25 transition-colors">
+                                <i class="fas fa-file-pdf"></i> View Report
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ===== PROJECT CARD 3 ===== -->
+                <div class="project-card glass rounded-2xl overflow-hidden card-hover" data-category="mobile"
+                    data-keywords="flutter dart firebase mobile health tracker" data-aos="fade-up" data-aos-delay="200">
+                    <div class="swiper project-swiper h-56 sm:h-64">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="https://via.placeholder.com/800x400/1e293b/a855f7?text=Mobile+App+Screenshot+1"
+                                    alt="Project 3 - Screenshot 1" class="w-full h-full object-cover" loading="lazy"
+                                    decoding="async"
+                                    onerror="this.src='https://via.placeholder.com/800x400/1e293b/64748b?text=Image+Unavailable'">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="https://via.placeholder.com/800x400/1e293b/3b82f6?text=Mobile+App+Screenshot+2"
+                                    alt="Project 3 - Screenshot 2" class="w-full h-full object-cover" loading="lazy"
+                                    decoding="async"
+                                    onerror="this.src='https://via.placeholder.com/800x400/1e293b/64748b?text=Image+Unavailable'">
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-2">
+                            <span
+                                class="px-3 py-1 rounded-full bg-purple-500/15 text-purple-400 text-xs font-medium">Mobile</span>
+                            <div class="flex items-center gap-3">
+                                <a href="https://github.com/YOUR_USERNAME/project3" target="_blank" rel="noopener"
+                                    class="text-gray-400 hover:text-white transition-colors"><i
+                                        class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <h3 class="text-white font-bold text-xl mb-2">Smart Health Tracker App</h3>
+                        <p class="text-gray-400 text-sm mb-4 line-clamp-2">A cross-platform health & fitness tracking
+                            application with wearable device sync, AI-powered meal suggestions, and real-time vitals
+                            monitoring.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="tech-pill text-xs">Flutter</span>
+                            <span class="tech-pill text-xs">Dart</span>
+                            <span class="tech-pill text-xs">Firebase</span>
+                            <span class="tech-pill text-xs">TFLite</span>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <button onclick="openVideoModal('YOUR_YOUTUBE_VIDEO_ID_3')"
+                                class="flex items-center gap-2 px-3 py-2 rounded-lg bg-red-500/15 text-red-400 text-xs font-medium hover:bg-red-500/25 transition-colors">
+                                <i class="fab fa-youtube"></i> Watch Demo
+                            </button>
+                            <a href="https://drive.google.com/YOUR_PDF_LINK_3" target="_blank" rel="noopener"
+                                class="flex items-center gap-2 px-3 py-2 rounded-lg bg-green-500/15 text-green-400 text-xs font-medium hover:bg-green-500/25 transition-colors">
+                                <i class="fas fa-file-pdf"></i> View Report
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ===== PROJECT CARD 4 ===== -->
+                <div class="project-card glass rounded-2xl overflow-hidden card-hover" data-category="web"
+                    data-keywords="dashboard analytics data visualization real-time websocket" data-aos="fade-up"
+                    data-aos-delay="300">
+                    <div class="swiper project-swiper h-56 sm:h-64">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="https://via.placeholder.com/800x400/1e293b/6366f1?text=Dashboard+Screenshot+1"
+                                    alt="Project 4 - Screenshot 1" class="w-full h-full object-cover" loading="lazy"
+                                    decoding="async"
+                                    onerror="this.src='https://via.placeholder.com/800x400/1e293b/64748b?text=Image+Unavailable'">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="https://via.placeholder.com/800x400/1e293b/06b6d4?text=Dashboard+Screenshot+2"
+                                    alt="Project 4 - Screenshot 2" class="w-full h-full object-cover" loading="lazy"
+                                    decoding="async"
+                                    onerror="this.src='https://via.placeholder.com/800x400/1e293b/64748b?text=Image+Unavailable'">
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="px-3 py-1 rounded-full bg-blue-500/15 text-blue-400 text-xs font-medium">Web
+                                Dev</span>
+                            <div class="flex items-center gap-3">
+                                <a href="https://github.com/YOUR_USERNAME/project4" target="_blank" rel="noopener"
+                                    class="text-gray-400 hover:text-white transition-colors"><i
+                                        class="fab fa-github"></i></a>
+                                <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors"><i
+                                        class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                        <h3 class="text-white font-bold text-xl mb-2">Real-Time Analytics Dashboard</h3>
+                        <p class="text-gray-400 text-sm mb-4 line-clamp-2">A live data visualization platform with
+                            WebSocket streams, interactive charts, anomaly detection alerts, and customizable widget
+                            layouts.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="tech-pill text-xs">Next.js</span>
+                            <span class="tech-pill text-xs">D3.js</span>
+                            <span class="tech-pill text-xs">Socket.io</span>
+                            <span class="tech-pill text-xs">PostgreSQL</span>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <button onclick="openVideoModal('YOUR_YOUTUBE_VIDEO_ID_4')"
+                                class="flex items-center gap-2 px-3 py-2 rounded-lg bg-red-500/15 text-red-400 text-xs font-medium hover:bg-red-500/25 transition-colors">
+                                <i class="fab fa-youtube"></i> Watch Demo
+                            </button>
+                            <a href="https://drive.google.com/YOUR_PDF_LINK_4" target="_blank" rel="noopener"
+                                class="flex items-center gap-2 px-3 py-2 rounded-lg bg-green-500/15 text-green-400 text-xs font-medium hover:bg-green-500/25 transition-colors">
+                                <i class="fas fa-file-pdf"></i> View Report
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div><!-- /projectGrid -->
+        </div>
+    </section>
+
+
+    <!-- ================================================================ -->
+    <!--          ACADEMIC & INDUSTRIAL VISITS GALLERY (Req 10)            -->
+    <!-- ================================================================ -->
+    <section id="visits" class="relative py-24 md:py-32">
+        <div class="orb w-[350px] h-[350px] bg-cyan-600 bottom-0 right-20" style="position:absolute;"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-16">
+                <p class="text-blue-400 font-medium text-sm tracking-wider uppercase mb-3" data-aos="fade-up">Beyond the
+                    Code</p>
+                <h2 class="section-heading font-poppins font-bold text-3xl sm:text-4xl text-white" data-aos="fade-up"
+                    data-aos-delay="100">
+                    Academic & Industrial <span class="gradient-text">Visits</span>
+                </h2>
+            </div>
+
+            <!-- Photo Gallery Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <!-- 🔧 CUSTOMIZE: Replace image URLs, alt text, and captions for each gallery item -->
+                <div class="group relative rounded-2xl overflow-hidden cursor-pointer aspect-square" data-aos="fade-up"
+                    data-aos-delay="100" onclick="openLightbox(this)">
+                    <img src="./DY_Class_RNSB_Industrial_Visit.jpg" alt="Industrial Visit - Tech Park"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        loading="lazy" decoding="async" onerror="this.src='https://placehold.co/600x400'">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                        <p class="text-white text-sm font-medium">RNSB Industrial Visit - 5th August 2025</p>
+                    </div>
+                </div>
+
+                <div class="group relative rounded-2xl overflow-hidden cursor-pointer aspect-square" data-aos="fade-up"
+                    data-aos-delay="400" onclick="openLightbox(this)">
+                    <img src="./DX_Class_RNSB_Industrial_Visit.jpg" alt="Team Coding"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        loading="lazy" decoding="async" onerror="this.src='https://placehold.co/600x400'">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                        <p class="text-white text-sm font-medium">RNSB Industrial Visit - 4th August 2025</p>
+                    </div>
+                </div>
+
+                <div class="group relative rounded-2xl overflow-hidden cursor-pointer aspect-square" data-aos="fade-up"
+                    data-aos-delay="450" onclick="openLightbox(this)">
+                    <img src="./QtonZ_Industrial_Visit_1.jpg" alt="Guest Lecture"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        loading="lazy" decoding="async" onerror="this.src='https://placehold.co/600x400'">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                        <p class="text-white text-sm font-medium">Qtonz Industrial Visit - 20th February 2025</p>
+                    </div>
+                </div>
+
+                <div class="group relative rounded-2xl overflow-hidden cursor-pointer aspect-square" data-aos="fade-up"
+                    data-aos-delay="150" onclick="openLightbox(this)">
+                    <img src="./QtonZ_Industrial_Visit_2.jpg" alt="National Hackathon"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        loading="lazy" decoding="async" onerror="this.src='https://placehold.co/600x400'">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                        <p class="text-white text-sm font-medium">Qtonz Industrial Visit - 20th February 2025</p>
+                    </div>
+                </div>
+
+                <div class="group relative rounded-2xl overflow-hidden cursor-pointer aspect-square" data-aos="fade-up"
+                    data-aos-delay="200" onclick="openLightbox(this)">
+                    <img src="./Codex_Project_Fair_1.jpg" alt="AI Workshop"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        loading="lazy" decoding="async" onerror="this.src='https://placehold.co/600x400'">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                        <p class="text-white text-sm font-medium">Codex Project Fair - 20th April 2026</p>
+                    </div>
+                </div>
+
+                <div class="group relative rounded-2xl overflow-hidden cursor-pointer aspect-square" data-aos="fade-up"
+                    data-aos-delay="250" onclick="openLightbox(this)">
+                    <img src="./Codex_Project_Fair_2.jpg" alt="Tech Conference"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        loading="lazy" decoding="async" onerror="this.src='https://placehold.co/600x400'">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                        <p class="text-white text-sm font-medium">Codex Project Fair - 20th April 2026</p>
+                    </div>
+                </div>
+
+                <div class="group relative rounded-2xl overflow-hidden cursor-pointer aspect-square" data-aos="fade-up"
+                    data-aos-delay="300" onclick="openLightbox(this)">
+                    <img src="./E-Infochips_Industrial_Visit.jpg" alt="Data Center Tour"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        loading="lazy" decoding="async" onerror="this.src='https://placehold.co/600x400'">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                        <p class="text-white text-sm font-medium">E-Infochips Industrial Visit - 7th August 2026</p>
+                    </div>
+                </div>
+
+                <div class="group relative rounded-2xl overflow-hidden cursor-pointer aspect-square" data-aos="fade-up"
+                    data-aos-delay="350" onclick="openLightbox(this)">
+                    <img src="./GTU_ihub_Visit.jpg" alt="Award Ceremony"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        loading="lazy" decoding="async" onerror="this.src='https://placehold.co/600x400'">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                        <p class="text-white text-sm font-medium">GTU iHub Visit - 7th August 2026</p>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ================================================================ -->
+    <!--            HONORS & CERTIFICATES GALLERY (Req 5)                  -->
+    <!-- ================================================================ -->
+    <section id="certificates" class="relative py-24 md:py-32">
+        <div class="orb w-[400px] h-[400px] bg-yellow-600 top-20 -left-40" style="position:absolute;"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-16">
+                <p class="text-blue-400 font-medium text-sm tracking-wider uppercase mb-3" data-aos="fade-up">
+                    Achievements</p>
+                <h2 class="section-heading font-poppins font-bold text-3xl sm:text-4xl text-white" data-aos="fade-up"
+                    data-aos-delay="100">
+                    Honors & <span class="gradient-text">Certifications</span>
+                </h2>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <!-- Certificate Card 1 -->
+                <!-- 🔧 CUSTOMIZE: Replace certificate details, image URLs, and verify links -->
+                <div class="glass rounded-2xl overflow-hidden card-hover" data-aos="fade-up" data-aos-delay="100">
+                    <div class="h-44 overflow-hidden relative group cursor-pointer" onclick="openLightbox(this)">
+                        <img src="https://via.placeholder.com/600x300/1e293b/3b82f6?text=AWS+Certificate"
+                            alt="AWS Cloud Practitioner Certificate"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                            loading="lazy" decoding="async"
+                            onerror="this.src='https://via.placeholder.com/600x300/1e293b/64748b?text=Certificate'">
+                        <div
+                            class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <i class="fas fa-search-plus text-white text-2xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-white font-bold mb-1">AWS Cloud Practitioner</h3>
+                        <p class="text-gray-400 text-sm mb-3">Amazon Web Services — 2026</p>
+                        <div class="flex items-center gap-2">
+                            <a href="https://www.credly.com/YOUR_CREDENTIAL_LINK" target="_blank" rel="noopener"
+                                class="flex items-center gap-1 px-3 py-2 rounded-lg bg-blue-500/15 text-blue-400 text-xs font-medium hover:bg-blue-500/25 transition-colors">
+                                <i class="fas fa-check-circle"></i> Verify Credential
+                            </a>
+                            <!-- 🔧 CUSTOMIZE: High-res image or Drive link -->
+                            <a href="https://drive.google.com/YOUR_CERT_IMAGE" target="_blank" rel="noopener"
+                                class="flex items-center gap-1 px-3 py-2 rounded-lg glass text-gray-300 text-xs font-medium hover:text-white transition-colors">
+                                <i class="fas fa-expand"></i> Full Size
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certificate Card 2 -->
+                <div class="glass rounded-2xl overflow-hidden card-hover" data-aos="fade-up" data-aos-delay="200">
+                    <div class="h-44 overflow-hidden relative group cursor-pointer" onclick="openLightbox(this)">
+                        <img src="https://via.placeholder.com/600x300/1e293b/06b6d4?text=TensorFlow+Certificate"
+                            alt="TensorFlow Developer Certificate"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                            loading="lazy" decoding="async"
+                            onerror="this.src='https://via.placeholder.com/600x300/1e293b/64748b?text=Certificate'">
+                        <div
+                            class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <i class="fas fa-search-plus text-white text-2xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-white font-bold mb-1">TensorFlow Developer Certificate</h3>
+                        <p class="text-gray-400 text-sm mb-3">Google — 2025</p>
+                        <div class="flex items-center gap-2">
+                            <a href="#" target="_blank" rel="noopener"
+                                class="flex items-center gap-1 px-3 py-2 rounded-lg bg-blue-500/15 text-blue-400 text-xs font-medium hover:bg-blue-500/25 transition-colors">
+                                <i class="fas fa-check-circle"></i> Verify Credential
+                            </a>
+                            <a href="#" target="_blank" rel="noopener"
+                                class="flex items-center gap-1 px-3 py-2 rounded-lg glass text-gray-300 text-xs font-medium hover:text-white transition-colors">
+                                <i class="fas fa-expand"></i> Full Size
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certificate Card 3 -->
+                <div class="glass rounded-2xl overflow-hidden card-hover" data-aos="fade-up" data-aos-delay="300">
+                    <div class="h-44 overflow-hidden relative group cursor-pointer" onclick="openLightbox(this)">
+                        <img src="https://via.placeholder.com/600x300/1e293b/a855f7?text=Meta+React+Certificate"
+                            alt="Meta React Native Certificate"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                            loading="lazy" decoding="async"
+                            onerror="this.src='https://via.placeholder.com/600x300/1e293b/64748b?text=Certificate'">
+                        <div
+                            class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <i class="fas fa-search-plus text-white text-2xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-white font-bold mb-1">Meta Front-End Developer</h3>
+                        <p class="text-gray-400 text-sm mb-3">Coursera / Meta — 2025</p>
+                        <div class="flex items-center gap-2">
+                            <a href="#" target="_blank" rel="noopener"
+                                class="flex items-center gap-1 px-3 py-2 rounded-lg bg-blue-500/15 text-blue-400 text-xs font-medium hover:bg-blue-500/25 transition-colors">
+                                <i class="fas fa-check-circle"></i> Verify Credential
+                            </a>
+                            <a href="#" target="_blank" rel="noopener"
+                                class="flex items-center gap-1 px-3 py-2 rounded-lg glass text-gray-300 text-xs font-medium hover:text-white transition-colors">
+                                <i class="fas fa-expand"></i> Full Size
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certificate Card 4 -->
+                <div class="glass rounded-2xl overflow-hidden card-hover" data-aos="fade-up" data-aos-delay="100">
+                    <div class="h-44 overflow-hidden relative group cursor-pointer" onclick="openLightbox(this)">
+                        <img src="https://via.placeholder.com/600x300/1e293b/f59e0b?text=Hackathon+Winner"
+                            alt="National Hackathon Winner"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                            loading="lazy" decoding="async"
+                            onerror="this.src='https://via.placeholder.com/600x300/1e293b/64748b?text=Certificate'">
+                        <div
+                            class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <i class="fas fa-search-plus text-white text-2xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-white font-bold mb-1">🏆 National Hackathon — 1st Place</h3>
+                        <p class="text-gray-400 text-sm mb-3">Smart India Hackathon — 2025</p>
+                        <div class="flex items-center gap-2">
+                            <a href="#" target="_blank" rel="noopener"
+                                class="flex items-center gap-1 px-3 py-2 rounded-lg glass text-gray-300 text-xs font-medium hover:text-white transition-colors">
+                                <i class="fas fa-expand"></i> Full Size
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certificate Card 5 -->
+                <div class="glass rounded-2xl overflow-hidden card-hover" data-aos="fade-up" data-aos-delay="200">
+                    <div class="h-44 overflow-hidden relative group cursor-pointer" onclick="openLightbox(this)">
+                        <img src="https://via.placeholder.com/600x300/1e293b/6366f1?text=Azure+Fundamentals"
+                            alt="Azure Fundamentals"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                            loading="lazy" decoding="async"
+                            onerror="this.src='https://via.placeholder.com/600x300/1e293b/64748b?text=Certificate'">
+                        <div
+                            class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <i class="fas fa-search-plus text-white text-2xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-white font-bold mb-1">Microsoft Azure Fundamentals (AZ-900)</h3>
+                        <p class="text-gray-400 text-sm mb-3">Microsoft — 2025</p>
+                        <div class="flex items-center gap-2">
+                            <a href="#" target="_blank" rel="noopener"
+                                class="flex items-center gap-1 px-3 py-2 rounded-lg bg-blue-500/15 text-blue-400 text-xs font-medium hover:bg-blue-500/25 transition-colors">
+                                <i class="fas fa-check-circle"></i> Verify Credential
+                            </a>
+                            <a href="#" target="_blank" rel="noopener"
+                                class="flex items-center gap-1 px-3 py-2 rounded-lg glass text-gray-300 text-xs font-medium hover:text-white transition-colors">
+                                <i class="fas fa-expand"></i> Full Size
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certificate Card 6 -->
+                <div class="glass rounded-2xl overflow-hidden card-hover" data-aos="fade-up" data-aos-delay="300">
+                    <div class="h-44 overflow-hidden relative group cursor-pointer" onclick="openLightbox(this)">
+                        <img src="https://via.placeholder.com/600x300/1e293b/10b981?text=DSA+Mastery"
+                            alt="DSA Mastery Certificate"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                            loading="lazy" decoding="async"
+                            onerror="this.src='https://via.placeholder.com/600x300/1e293b/64748b?text=Certificate'">
+                        <div
+                            class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <i class="fas fa-search-plus text-white text-2xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-white font-bold mb-1">Data Structures & Algorithms Mastery</h3>
+                        <p class="text-gray-400 text-sm mb-3">GeeksforGeeks — 2024</p>
+                        <div class="flex items-center gap-2">
+                            <a href="#" target="_blank" rel="noopener"
+                                class="flex items-center gap-1 px-3 py-2 rounded-lg bg-blue-500/15 text-blue-400 text-xs font-medium hover:bg-blue-500/25 transition-colors">
+                                <i class="fas fa-check-circle"></i> Verify Credential
+                            </a>
+                            <a href="#" target="_blank" rel="noopener"
+                                class="flex items-center gap-1 px-3 py-2 rounded-lg glass text-gray-300 text-xs font-medium hover:text-white transition-colors">
+                                <i class="fas fa-expand"></i> Full Size
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ================================================================ -->
+    <!--              CONTACT & COMMUNICATION (Req 7)                      -->
+    <!-- ================================================================ -->
+    <section id="contact" class="relative py-24 md:py-32">
+        <div class="orb w-[400px] h-[400px] bg-blue-600 bottom-0 right-0" style="position:absolute;"></div>
+        <div class="orb w-[300px] h-[300px] bg-purple-600 top-20 left-0" style="position:absolute;"></div>
+        <div class="max-w-5xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-16">
+                <p class="text-blue-400 font-medium text-sm tracking-wider uppercase mb-3" data-aos="fade-up">Get In
+                    Touch</p>
+                <h2 class="section-heading font-poppins font-bold text-3xl sm:text-4xl text-white" data-aos="fade-up"
+                    data-aos-delay="100">
+                    Let's <span class="gradient-text">Connect</span>
+                </h2>
+                <p class="text-gray-400 mt-6 max-w-xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                    I'm always open to discussing new opportunities, collaborations, or just having a great tech
+                    conversation. Reach out and let's build something amazing together.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-5 gap-8">
+                <!-- Direct Contact Info -->
+                <div class="lg:col-span-2 space-y-4" data-aos="fade-right" data-aos-delay="300">
+                    <!-- 🔧 CUSTOMIZE: Replace email, phone, and location -->
+                    <a href="mailto:vanshmakvana2@gmail.com"
+                        class="glass rounded-2xl p-5 flex items-center gap-4 card-hover group">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-blue-500/20 flex items-center justify-center text-blue-400 group-hover:scale-110 transition-transform">
+                            <i class="fas fa-envelope text-lg"></i>
+                        </div>
+                        <div>
+                            <p class="text-gray-400 text-xs">Email</p>
+                            <p class="text-white font-medium text-sm">vanshmakvana2@gmail.com</p>
+                        </div>
+                    </a>
+
+                    <a href="mailto:vanshmakvana17@gmail.com"
+                        class="glass rounded-2xl p-5 flex items-center gap-4 card-hover group">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-blue-500/20 flex items-center justify-center text-blue-400 group-hover:scale-110 transition-transform">
+                            <i class="fas fa-envelope text-lg"></i>
+                        </div>
+                        <div>
+                            <p class="text-gray-400 text-xs">Email</p>
+                            <p class="text-white font-medium text-sm">vanshmakvana17@gmail.com</p>
+                        </div>
+                    </a>
+
+                    <a href="tel:+917575040437" class="glass rounded-2xl p-5 flex items-center gap-4 card-hover group">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-green-500/20 flex items-center justify-center text-green-400 group-hover:scale-110 transition-transform">
+                            <i class="fas fa-phone text-lg"></i>
+                        </div>
+                        <div>
+                            <p class="text-gray-400 text-xs">Phone</p>
+                            <p class="text-white font-medium text-sm">+91 75750 40437</p>
+                        </div>
+                    </a>
+                    <div class="glass rounded-2xl p-5 flex items-center gap-4">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-purple-500/20 flex items-center justify-center text-purple-400">
+                            <i class="fas fa-map-marker-alt text-lg"></i>
+                        </div>
+                        <div>
+                            <p class="text-gray-400 text-xs">Location</p>
+                            <p class="text-white font-medium text-sm">Rajkot, Gujarat, India</p>
+                        </div>
+                    </div>
+
+                    <!-- Social Links Row -->
+                    <div class="flex items-center gap-3 pt-2">
+                        <!-- 🔧 CUSTOMIZE: Replace social links -->
+                        <a href="https://github.com/Vanshmakvana" target="_blank" rel="noopener"
+                            class="w-11 h-11 rounded-xl glass flex items-center justify-center text-gray-400 hover:text-white hover:bg-white/10 transition-all"><i
+                                class="fab fa-github"></i></a>
+                        <a href="https://linkedin.com/in/vansh-makvana17" target="_blank" rel="noopener"
+                            class="w-11 h-11 rounded-xl glass flex items-center justify-center text-gray-400 hover:text-blue-400 hover:bg-blue-500/10 transition-all"><i
+                                class="fab fa-linkedin-in"></i></a>
+                        <a href="https://x.com/VanshMakvana17" target="_blank" rel="noopener"
+                            class="w-11 h-11 rounded-xl glass flex items-center justify-center text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 transition-all"><i
+                                class="fab fa-twitter"></i></a>
+                        <a href="https://leetcode.com/u/VANSH_MAKVANA/" target="_blank" rel="noopener"
+                            class="w-11 h-11 rounded-xl glass flex items-center justify-center text-gray-400 hover:text-yellow-400 hover:bg-yellow-500/10 transition-all"><i
+                                class="fas fa-code"></i></a>
+                    </div>
+                </div>
+
+                <!-- Contact Form (Formspree / EmailJS Integration) -->
+                <div class="lg:col-span-3" data-aos="fade-left" data-aos-delay="400">
+                    <div class="glass rounded-2xl p-6 sm:p-8">
+                        <!-- 🔧 CUSTOMIZE: Replace action URL with your Formspree endpoint (e.g., https://formspree.io/f/xYOURFORM) -->
+                        <form id="contactForm" action="https://formspree.io/f/xoealldj" method="POST">
+                            <div class="grid sm:grid-cols-2 gap-4 mb-4">
+                                <div>
+                                    <label class="text-gray-400 text-xs font-medium mb-1 block">Your Name</label>
+                                    <input type="text" name="name" required placeholder="John Doe"
+                                        class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white text-sm placeholder-gray-500 outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500/50 transition-all">
+                                </div>
+                                <div>
+                                    <label class="text-gray-400 text-xs font-medium mb-1 block">Your Email</label>
+                                    <input type="email" name="email" required placeholder="john@company.com"
+                                        class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white text-sm placeholder-gray-500 outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500/50 transition-all">
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <label class="text-gray-400 text-xs font-medium mb-1 block">Subject</label>
+                                <input type="text" name="subject" required placeholder="Opportunity / Collaboration"
+                                    class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white text-sm placeholder-gray-500 outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500/50 transition-all">
+                            </div>
+                            <div class="mb-6">
+                                <label class="text-gray-400 text-xs font-medium mb-1 block">Message</label>
+                                <textarea name="message" required rows="5" placeholder="Hi, I'd like to discuss..."
+                                    class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white text-sm placeholder-gray-500 outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500/50 transition-all resize-none"></textarea>
+                            </div>
+                            <button type="submit" id="submitBtn"
+                                class="w-full py-4 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold text-sm hover:shadow-[0_0_30px_rgba(59,130,246,0.4)] transition-all hover:scale-[1.02] active:scale-[0.98]">
+                                <i class="fas fa-paper-plane mr-2"></i>Send Message
+                            </button>
+                            <p id="formStatus" class="text-center text-sm mt-4 hidden"></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ================================================================ -->
+    <!--                            FOOTER                                 -->
+    <!-- ================================================================ -->
+    <footer class="border-t border-white/5 py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p class="text-gray-500 text-sm">
+                <!-- 🔧 CUSTOMIZE: Your name and year -->
+                &copy; 2026 <span class="text-gray-400">Vansh Makvana</span>. Built with <i
+                    class="fas fa-heart text-red-500 text-xs"></i> and clean code.
+            </p>
+            <div class="flex items-center gap-4 text-gray-500 text-sm">
+                <a href="#hero" class="hover:text-white transition-colors">Back to Top</a>
+                <span>•</span>
+                <a href="https://github.com/Vanshmakvana" target="_blank" rel="noopener"
+                    class="hover:text-white transition-colors">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- ================================================================ -->
+    <!--                    YOUTUBE VIDEO MODAL (Req 1)                     -->
+    <!-- ================================================================ -->
+    <div id="videoModal" class="modal-overlay" onclick="closeVideoModal(event)">
+        <div class="modal-content w-full max-w-4xl mx-4">
+            <div class="relative">
+                <button onclick="closeVideoModal(event, true)"
+                    class="absolute -top-10 right-0 text-white/70 hover:text-white text-2xl transition-colors"
+                    aria-label="Close video">
+                    <i class="fas fa-times"></i>
+                </button>
+                <div class="aspect-video rounded-2xl overflow-hidden bg-black">
+                    <iframe id="videoIframe" class="w-full h-full" src="" title="Project Demo Video" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ================================================================ -->
+    <!--                      LIGHTBOX MODAL (Req 10)                      -->
+    <!-- ================================================================ -->
+    <div id="lightboxModal" class="modal-overlay" onclick="closeLightbox(event)">
+        <div class="modal-content relative">
+            <button onclick="closeLightbox(event, true)"
+                class="absolute -top-10 right-0 text-white/70 hover:text-white text-2xl transition-colors z-10"
+                aria-label="Close lightbox">
+                <i class="fas fa-times"></i>
+            </button>
+            <img id="lightboxImg" src="" alt="Expanded view" class="max-w-full max-h-[85vh] rounded-2xl object-contain">
+            <p id="lightboxCaption" class="text-white text-center mt-4 text-sm font-medium"></p>
+        </div>
+    </div>
+
+
+    <!-- ================================================================ -->
+    <!--            RECRUITER QUICK SUMMARY MODAL (Req 12)                 -->
+    <!-- ================================================================ -->
+    <div id="recruiterModal" class="modal-overlay" onclick="closeRecruiterModal(event)">
+        <div class="modal-content glass-strong rounded-3x1 p-8 sm:p-10 max-w-lg mx-4 text-center"
+            onclick="event.stopPropagation()">
+            <div
+                class="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-white text-2xl mx-auto mb-6">
+                <i class="fas fa-briefcase"></i>
+            </div>
+            <h3 class="font-poppins font-bold text-2xl text-white mb-2">Quick Recruiter Summary</h3>
+            <p class="text-blue-400 text-sm font-medium mb-6">1-Minute Pitch</p>
+
+            <div class="text-left space-y-4 mb-8">
+                <!-- 🔧 CUSTOMIZE: Replace with your actual details -->
+                <div class="flex items-start gap-3">
+                    <i class="fas fa-user-graduate text-blue-400 mt-1"></i>
+                    <div>
+                        <p class="text-white font-semibold text-sm">Education</p>
+                        <p class="text-gray-400 text-sm">Diploma in Information Technology - Gujarat Technological
+                            University (CGPA: 7.53)</p>
+                        <br>
+                        <p class="text-gray-400 text-sm">Bachelor of Engineering in Information Technology - Gujarat
+                            Technological University (CPI: 7.01)</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-3">
+                    <i class="fas fa-code text-cyan-400 mt-1"></i>
+                    <div>
+                        <p class="text-white font-semibold text-sm">Core Skills</p>
+                        <p class="text-gray-400 text-sm">Java, Basic Python, C, HTML, CSS, JavaScript, Bootstrap, React,
+                            Node.js, Flutter, MongoDB</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-3">
+                    <i class="fas fa-briefcase text-purple-400 mt-1"></i>
+                    <div>
+                        <p class="text-white font-semibold text-sm">Experience</p>
+                        <p class="text-gray-400 text-sm">3 months internship at Infotact Solutions company in MERN Stack
+                            Web Development</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start gap-3">
+                    <i class="fas fa-map-marker-alt text-green-400 mt-1"></i>
+                    <div>
+                        <p class="text-white font-semibold text-sm">Availability</p>
+                        <p class="text-gray-400 text-sm">Open for full-time & remote roles • Willing to relocate</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-3">
+                <a href="mailto:vanshmakvana2@gmail.com"
+                    class="flex-1 py-3 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold text-sm text-center hover:shadow-lg transition-all">
+                    <i class="fas fa-envelope mr-2"></i>Email Me
+                </a>
+                <a href="https://drive.google.com/file/d/1xV_uEqMQgBq452G00ttZtLMa4uvWUXQI/view?usp=sharing"
+                    target="_blank" rel="noopener"
+                    class="flex-1 py-3 rounded-xl glass text-white font-semibold text-sm text-center hover:bg-white/10 transition-all">
+                    <i class="fas fa-download mr-2"></i>Resume
+                </a>
+            </div>
+
+            <button onclick="closeRecruiterModal(event, true)"
+                class="mt-4 text-gray-500 hover:text-gray-300 text-sm transition-colors">Close</button>
+        </div>
+    </div>
+
+
+    <!-- ================================================================ -->
+    <!--              RECRUITER FLOATING BADGE (Req 12)                     -->
+    <!-- ================================================================ -->
+    <button onclick="openRecruiterModal()" class="recruiter-badge group" aria-label="Quick Recruiter Summary">
+        <div class="relative">
+            <div
+                class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full blur opacity-60 group-hover:opacity-100 transition-opacity">
+            </div>
+            <div
+                class="relative w-14 h-14 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 flex items-center justify-center text-white shadow-2xl">
+                <i class="fas fa-user-tie text-lg"></i>
+            </div>
+        </div>
+        <span
+            class="absolute right-full mr-3 top-1/2 -translate-y-1/2 px-3 py-1.5 rounded-lg glass-strong text-white text-xs font-medium whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+            HR 1-Minute Pitch
+        </span>
+    </button>
+
+
+    <!-- ================================================================ -->
+    <!--                     BACK TO TOP BUTTON                            -->
+    <!-- ================================================================ -->
+    <button id="backToTop"
+        class="fixed bottom-8 right-8 w-12 h-12 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white flex items-center justify-center shadow-2xl opacity-0 pointer-events-none transition-all duration-300 hover:scale-110 hover:shadow-[0_0_30px_rgba(59,130,246,0.5)] z-50"
+        onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+
+    <!-- ================================================================ -->
+    <!--                   CDN JS DEPENDENCIES                             -->
+    <!-- ================================================================ -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+
+    <!-- ================================================================ -->
+    <!--                    ALL JAVASCRIPT LOGIC                            -->
+    <!-- ================================================================ -->
+    <script>
+        // ============ AOS INIT ============
+        AOS.init({
+            duration: 800,
+            easing: 'ease-out-cubic',
+            once: true,
+            offset: 80,
+        });
+
+        // ============ SWIPER INIT (for project carousels) ============
+        document.querySelectorAll('.project-swiper').forEach(el => {
+            new Swiper(el, {
+                loop: true,
+                autoplay: { delay: 4000, disableOnInteraction: false },
+                pagination: { el: el.querySelector('.swiper-pagination'), clickable: true },
+                navigation: {
+                    nextEl: el.querySelector('.swiper-button-next'),
+                    prevEl: el.querySelector('.swiper-button-prev'),
+                },
+                lazy: true,
+            });
+        });
+
+        // ============ NAVBAR SCROLL EFFECTS ============
+        const navbar = document.getElementById('navbar');
+        let lastScroll = 0;
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            // Add glass bg on scroll
+            if (currentScroll > 50) {
+                navbar.classList.add('glass-strong', 'shadow-2xl');
+            } else {
+                navbar.classList.remove('glass-strong', 'shadow-2xl');
+            }
+            lastScroll = currentScroll;
+
+            // Back to top button
+            const btn = document.getElementById('backToTop');
+            if (currentScroll > 500) {
+                btn.classList.remove('opacity-0', 'pointer-events-none');
+                btn.classList.add('opacity-100');
+            } else {
+                btn.classList.add('opacity-0', 'pointer-events-none');
+                btn.classList.remove('opacity-100');
+            }
+
+            // Active nav link
+            updateActiveNav();
+        });
+
+        // ============ ACTIVE NAV LINK HIGHLIGHTING ============
+        function updateActiveNav() {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-link');
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 120;
+                if (window.pageYOffset >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
+            navLinks.forEach(link => {
+                link.classList.remove('active', 'text-white');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active', 'text-white');
+                }
+            });
+        }
+
+        // ============ MOBILE MENU TOGGLE ============
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const icon = mobileMenuBtn.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+        // Close mobile menu on link click
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                const icon = mobileMenuBtn.querySelector('i');
+                icon.classList.add('fa-bars');
+                icon.classList.remove('fa-times');
+            });
+        });
+
+        // ============ THEME TOGGLE (Light/Dark) ============
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = document.getElementById('themeIcon');
+        let isDark = true;
+
+        // Check stored preference
+        if (localStorage.getItem('theme') === 'light') {
+            document.body.classList.add('light-mode');
+            document.documentElement.classList.remove('dark');
+            themeIcon.classList.replace('fa-moon', 'fa-sun');
+            isDark = false;
+        }
+
+        themeToggle.addEventListener('click', () => {
+            isDark = !isDark;
+            document.body.classList.toggle('light-mode');
+            if (isDark) {
+                document.documentElement.classList.add('dark');
+                themeIcon.classList.replace('fa-sun', 'fa-moon');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+                themeIcon.classList.replace('fa-moon', 'fa-sun');
+                localStorage.setItem('theme', 'light');
+            }
+        });
+
+        // ============ HERO TYPING ANIMATION ============
+        const typingTexts = [
+            // 🔧 CUSTOMIZE: Replace with your own taglines
+            'Full-Stack Web Developer',
+            'Front-End Web Developer',
+            'Back-End Web Developer',
+            'AI & Machine Learning Engineer',
+            'Problem Solver & Innovator',
+            'Web & Mobile Application Developer'
+        ];
+        let textIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        const typingEl = document.getElementById('heroTyping');
+
+        function typeEffect() {
+            const currentText = typingTexts[textIndex];
+            if (isDeleting) {
+                typingEl.textContent = currentText.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typingEl.textContent = currentText.substring(0, charIndex + 1);
+                charIndex++;
+            }
+
+            let speed = isDeleting ? 40 : 80;
+
+            if (!isDeleting && charIndex === currentText.length) {
+                speed = 2000; // Pause at end
+                isDeleting = true;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                textIndex = (textIndex + 1) % typingTexts.length;
+                speed = 500; // Pause before next word
+            }
+            setTimeout(typeEffect, speed);
+        }
+        typeEffect();
+
+        // ============ READ MORE TOGGLE ============
+        function toggleReadMore() {
+            const content = document.getElementById('readMoreContent');
+            const btn = document.getElementById('readMoreBtn');
+            const icon = document.getElementById('readMoreIcon');
+            content.classList.toggle('hidden');
+            if (content.classList.contains('hidden')) {
+                btn.innerHTML = '<i class="fas fa-chevron-down mr-1"></i> Read More';
+            } else {
+                btn.innerHTML = '<i class="fas fa-chevron-up mr-1"></i> Read Less';
+            }
+        }
+
+        // ============ PROJECT FILTER SYSTEM ============
+        function filterProjects(category, btnEl) {
+            // Update active button
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            btnEl.classList.add('active');
+
+            const cards = document.querySelectorAll('.project-card');
+            cards.forEach(card => {
+                const cardCategory = card.dataset.category;
+                if (category === 'all' || cardCategory === category) {
+                    card.style.display = '';
+                    card.style.opacity = '0';
+                    card.style.transform = 'translateY(20px)';
+                    setTimeout(() => {
+                        card.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+                        card.style.opacity = '1';
+                        card.style.transform = 'translateY(0)';
+                    }, 50);
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // ============ PROJECT KEYWORD SEARCH (Req 12) ============
+        const projectSearch = document.getElementById('projectSearch');
+        projectSearch.addEventListener('input', (e) => {
+            const query = e.target.value.toLowerCase().trim();
+            const cards = document.querySelectorAll('.project-card');
+            cards.forEach(card => {
+                const keywords = (card.dataset.keywords || '').toLowerCase();
+                const title = card.querySelector('h3')?.textContent.toLowerCase() || '';
+                const desc = card.querySelector('p')?.textContent.toLowerCase() || '';
+                const match = !query || keywords.includes(query) || title.includes(query) || desc.includes(query);
+                card.style.display = match ? '' : 'none';
+            });
+            // Reset filter buttons
+            if (query) {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            }
+        });
+
+        // ============ YOUTUBE VIDEO MODAL (Facade pattern - Req 1) ============
+        function openVideoModal(videoId) {
+            const modal = document.getElementById('videoModal');
+            const iframe = document.getElementById('videoIframe');
+            iframe.src = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1&rel=0';
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeVideoModal(e, force) {
+            if (force || e.target === document.getElementById('videoModal')) {
+                const modal = document.getElementById('videoModal');
+                const iframe = document.getElementById('videoIframe');
+                iframe.src = '';
+                modal.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        }
+
+        // ============ LIGHTBOX MODAL (Req 10) ============
+        function openLightbox(el) {
+            const img = el.querySelector('img');
+            const caption = el.querySelector('p');
+            if (!img) return;
+            const modal = document.getElementById('lightboxModal');
+            const modalImg = document.getElementById('lightboxImg');
+            const modalCaption = document.getElementById('lightboxCaption');
+            modalImg.src = img.src;
+            modalImg.alt = img.alt;
+            modalCaption.textContent = caption ? caption.textContent : img.alt;
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeLightbox(e, force) {
+            if (force || e.target === document.getElementById('lightboxModal')) {
+                document.getElementById('lightboxModal').classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        }
+
+        // ============ RECRUITER MODAL (Req 12) ============
+        function openRecruiterModal() {
+            document.getElementById('recruiterModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeRecruiterModal(e, force) {
+            if (force || e.target === document.getElementById('recruiterModal')) {
+                document.getElementById('recruiterModal').classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        }
+
+        // ============ CONTACT FORM AJAX SUBMISSION ============
+        const contactForm = document.getElementById('contactForm');
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const submitBtn = document.getElementById('submitBtn');
+            const formStatus = document.getElementById('formStatus');
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Sending...';
+
+            try {
+                const response = await fetch(contactForm.action, {
+                    method: 'POST',
+                    body: new FormData(contactForm),
+                    headers: { 'Accept': 'application/json' },
+                });
+                if (response.ok) {
+                    formStatus.textContent = '✅ Message sent successfully! I\'ll get back to you soon.';
+                    formStatus.className = 'text-center text-sm mt-4 text-green-400';
+                    formStatus.classList.remove('hidden');
+                    contactForm.reset();
+                } else {
+                    throw new Error('Server error');
+                }
+            } catch (err) {
+                formStatus.textContent = '❌ Failed to send. Please try emailing me directly.';
+                formStatus.className = 'text-center text-sm mt-4 text-red-400';
+                formStatus.classList.remove('hidden');
+            }
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = '<i class="fas fa-paper-plane mr-2"></i>Send Message';
+            setTimeout(() => formStatus.classList.add('hidden'), 6000);
+        });
+
+        // ============ KEYBOARD SHORTCUTS ============
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeVideoModal(e, true);
+                closeLightbox(e, true);
+                closeRecruiterModal(e, true);
+            }
+        });
+
+        // ============ SMOOTH REVEAL ON LOAD ============
+        window.addEventListener('load', () => {
+            document.body.style.opacity = '1';
+        });
+    </script>
+
+</body>
+
+</html>
