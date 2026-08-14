@@ -2,6 +2,7 @@
 <html lang="en" class="scroll-smooth dark">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vansh Makvana - Full-Stack Developer & AI/ML Engineer Portfolio</title>
@@ -487,6 +488,126 @@
             color: #fff !important;
             box-shadow: 0 4px 20px rgba(59, 130, 246, 0.4);
         }
+
+
+
+
+        /* Remove custom cursor overlap on all devices */
+        html,
+        body {
+            cursor: auto !important;
+        }
+
+        * {
+            cursor: inherit;
+        }
+
+        .cursor,
+        .custom-cursor,
+        .mouse-cursor,
+        .cursor-follow {
+            display: none !important;
+        }
+
+        /* Better touch behavior */
+        @media (hover: none) and (pointer: coarse) {
+
+            .card-hover:hover,
+            .tech-pill:hover,
+            .nav-link:hover,
+            .mobile-nav-link:hover {
+                transform: none !important;
+                box-shadow: none !important;
+            }
+
+            .group-hover\:scale-110:hover,
+            .group-hover\:opacity-100:hover {
+                transform: none !important;
+                opacity: 1 !important;
+            }
+        }
+
+        /* Mobile layout improvements */
+        @media (max-width: 1024px) {
+            .orb {
+                filter: blur(60px);
+                opacity: 0.10;
+            }
+
+            section {
+                padding-top: 5rem;
+                padding-bottom: 5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .recruiter-badge {
+                right: 12px;
+                bottom: 88px;
+            }
+
+            #backToTop {
+                right: 12px;
+                bottom: 12px;
+            }
+
+            .section-heading {
+                font-size: clamp(1.5rem, 5vw, 2.25rem);
+            }
+
+            .glass,
+            .glass-strong {
+                backdrop-filter: blur(10px);
+            }
+
+            .modal-content {
+                width: calc(100vw - 24px);
+                max-width: calc(100vw - 24px);
+                max-height: 85vh;
+            }
+        }
+
+        @media (max-width: 640px) {
+            #hero h1 {
+                font-size: clamp(2rem, 9vw, 3rem);
+                line-height: 1.1;
+            }
+
+            #hero p {
+                font-size: 1rem;
+            }
+
+            .grid {
+                gap: 1rem;
+            }
+
+            .project-card,
+            .glass {
+                border-radius: 1rem;
+            }
+
+            .swiper-button-next,
+            .swiper-button-prev {
+                display: none !important;
+            }
+
+            .swiper-pagination {
+                bottom: 6px !important;
+            }
+
+            input,
+            textarea,
+            button {
+                font-size: 16px;
+            }
+        }
+
+        /* Prevent horizontal scrolling */
+        html,
+        body {
+            overflow-x: hidden;
+            max-width: 100%;
+        }
     </style>
 </head>
 
@@ -644,12 +765,7 @@
         </div>
 
         <!-- Scroll Indicator -->
-        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-gray-500 text-xs">
-            <span>Scroll Down</span>
-            <div class="w-5 h-8 border-2 border-gray-600 rounded-full flex items-start justify-center p-1">
-                <div class="w-1 h-2 bg-blue-500 rounded-full animate-bounce"></div>
-            </div>
-        </div>
+
     </section>
 
 
@@ -828,8 +944,8 @@
             </div>
 
             <!-- GitHub Stats Embed Cards -->
-            <div class="grid md:grid-cols-2 gap-6">
-                <!-- 🔧 CUSTOMIZE: Replace YOUR_USERNAME in the img src URLs below -->
+            <!-- <div class="grid md:grid-cols-2 gap-6">
+                🔧 CUSTOMIZE: Replace YOUR_USERNAME in the img src URLs below
                 <div class="glass rounded-2xl p-4 text-center" data-aos="fade-up" data-aos-delay="400">
                     <img src="https://github-readme-stats.vercel.app/api?username=Vanshmakvana&show_icons=true&theme=tokyonight&hide_border=true&bg_color=00000000&text_color=94a3b8&title_color=3b82f6&icon_color=06b6d4"
                         alt="GitHub Stats" class="mx-auto max-w-full" loading="lazy" decoding="async"
@@ -843,12 +959,12 @@
             </div>
 
             <!-- LeetCode Stats -->
-            <div class="mt-6 glass rounded-2xl p-4 text-center" data-aos="fade-up" data-aos-delay="600">
-                <!-- 🔧 CUSTOMIZE: Replace YOUR_USERNAME -->
-                <img src="https://leetcard.jacoblin.cool/VANSH_MAKVANA?theme=dark&font=Inter&ext=png"
-                    alt="LeetCode Stats" class="mx-auto max-w-full" loading="lazy" decoding="async"
-                    onerror="this.parentElement.innerHTML='<p class=\'text-gray-500 py-8\'>LeetCode Stats Unavailable — <a href=\'https://leetcode.com/VANSH_MAKVANA\' target=\'_blank\' class=\'text-blue-400\'>View Profile</a></p>'">
-            </div>
+            <!-- <div class="mt-6 glass rounded-2xl p-4 text-center" data-aos="fade-up" data-aos-delay="600"> -->
+            <!-- 🔧 CUSTOMIZE: Replace YOUR_USERNAME -->
+            <!-- <img src="https://leetcard.jacoblin.cool/VANSH_MAKVANA?theme=dark&font=Inter&ext=png" -->
+            <!-- alt="LeetCode Stats" class="mx-auto max-w-full" loading="lazy" decoding="async" -->
+            <!-- onerror="this.parentElement.innerHTML='<p class=\'text-gray-500 py-8\'>LeetCode Stats Unavailable — <a href=\'https://leetcode.com/VANSH_MAKVANA\' target=\'_blank\' class=\'text-blue-400\'>View Profile</a></p>'"> -->
+            <!-- </div> -->
         </div>
     </section>
 
@@ -1020,23 +1136,66 @@
                         <div class="swiper-wrapper">
                             <!-- 🔧 CUSTOMIZE: Replace image URLs -->
                             <div class="swiper-slide">
-                                <img src="https://via.placeholder.com/800x400/1e293b/3b82f6?text=Project+1+Screenshot+1"
-                                    alt="Project 1 - Screenshot 1" class="w-full h-full object-cover" loading="lazy"
-                                    decoding="async"
-                                    onerror="this.src='https://via.placeholder.com/800x400/1e293b/64748b?text=Image+Unavailable'">
+                                <img src="p1_1.png" alt="Project 1 - Screenshot 1" class="w-full h-full object-cover"
+                                    loading="lazy" decoding="async" onerror="this.src='https://placehold.co/600x400'">
                             </div>
                             <div class="swiper-slide">
-                                <img src="https://via.placeholder.com/800x400/1e293b/06b6d4?text=Project+1+Screenshot+2"
-                                    alt="Project 1 - Screenshot 2" class="w-full h-full object-cover" loading="lazy"
-                                    decoding="async"
-                                    onerror="this.src='https://via.placeholder.com/800x400/1e293b/64748b?text=Image+Unavailable'">
+                                <img src="p1_2.png" alt="Project 1 - Screenshot 2" class="w-full h-full object-cover"
+                                    loading="lazy" decoding="async" onerror="this.src='https://placehold.co/600x400'">
                             </div>
                             <div class="swiper-slide">
-                                <img src="https://via.placeholder.com/800x400/1e293b/a855f7?text=Project+1+Screenshot+3"
-                                    alt="Project 1 - Screenshot 3" class="w-full h-full object-cover" loading="lazy"
-                                    decoding="async"
-                                    onerror="this.src='https://via.placeholder.com/800x400/1e293b/64748b?text=Image+Unavailable'">
+                                <img src="p1_3.png" alt="Project 1 - Screenshot 3" class="w-full h-full object-cover"
+                                    loading="lazy" decoding="async" onerror="this.src='https://placehold.co/600x400'">
                             </div>
+                            <div class="swiper-slide">
+                                <img src="p1_4.png" alt="Project 1 - Screenshot 4" class="w-full h-full object-cover"
+                                    loading="lazy" decoding="async" onerror="this.src='https://placehold.co/600x400'">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="p1_5.png" alt="Project 1 - Screenshot 5" class="w-full h-full object-cover"
+                                    loading="lazy" decoding="async" onerror="this.src='https://placehold.co/600x400'">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="p1_6.png" alt="Project 1 - Screenshot 6" class="w-full h-full object-cover"
+                                    loading="lazy" decoding="async" onerror="this.src='https://placehold.co/600x400'">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="p1_7.png" alt="Project 1 - Screenshot 7" class="w-full h-full object-cover"
+                                    loading="lazy" decoding="async" onerror="this.src='https://placehold.co/600x400'">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="p1_8.png" alt="Project 1 - Screenshot 8" class="w-full h-full object-cover"
+                                    loading="lazy" decoding="async" onerror="this.src='https://placehold.co/600x400'">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="p1_9.png" alt="Project 1 - Screenshot 9" class="w-full h-full object-cover"
+                                    loading="lazy" decoding="async" onerror="this.src='https://placehold.co/600x400'">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="p1_10.png" alt="Project 1 - Screenshot 10" class="w-full h-full object-cover"
+                                    loading="lazy" decoding="async" onerror="this.src='https://placehold.co/600x400'">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="p1_11.png" alt="Project 1 - Screenshot 11" class="w-full h-full object-cover"
+                                    loading="lazy" decoding="async" onerror="this.src='https://placehold.co/600x400'">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="p1_12.png" alt="Project 1 - Screenshot 12" class="w-full h-full object-cover"
+                                    loading="lazy" decoding="async" onerror="this.src='https://placehold.co/600x400'">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="p1_13.png" alt="Project 1 - Screenshot 13" class="w-full h-full object-cover"
+                                    loading="lazy" decoding="async" onerror="this.src='https://placehold.co/600x400'">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="p1_14.png" alt="Project 1 - Screenshot 14" class="w-full h-full object-cover"
+                                    loading="lazy" decoding="async" onerror="this.src='https://placehold.co/600x400'">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="p1_15.png" alt="Project 1 - Screenshot 15" class="w-full h-full object-cover"
+                                    loading="lazy" decoding="async" onerror="this.src='https://placehold.co/600x400'">
+                            </div>
+
                         </div>
                         <div class="swiper-pagination"></div>
                         <div class="swiper-button-prev"></div>
@@ -1058,24 +1217,24 @@
                                         class="fas fa-external-link-alt"></i></a>
                             </div>
                         </div>
-                        <h3 class="text-white font-bold text-xl mb-2">AI-Powered E-Commerce Platform</h3>
+                        <h3 class="text-white font-bold text-xl mb-2">ProNotes Android Application</h3>
                         <p class="text-gray-400 text-sm mb-4 line-clamp-2">A full-stack marketplace with AI product
                             recommendations, real-time inventory management, Stripe payments, and an admin analytics
                             dashboard.</p>
 
                         <!-- Tech Stack Tags -->
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="tech-pill text-xs">React</span>
-                            <span class="tech-pill text-xs">Node.js</span>
-                            <span class="tech-pill text-xs">MongoDB</span>
-                            <span class="tech-pill text-xs">Stripe</span>
+                            <span class="tech-pill text-xs">Java</span>
+                            <span class="tech-pill text-xs">Kotlin</span>
+                            <span class="tech-pill text-xs">Xml</span>
+                            <span class="tech-pill text-xs">Firebase</span>
                         </div>
 
                         <!-- Action Buttons -->
                         <div class="flex flex-wrap gap-2">
                             <!-- YouTube Video Button (Req 1) - Facade Pattern -->
                             <!-- 🔧 CUSTOMIZE: Replace YOUR_YOUTUBE_VIDEO_ID_1 -->
-                            <button onclick="openVideoModal('YOUR_YOUTUBE_VIDEO_ID_1')"
+                            <button onclick="openVideoModal('MBSTgDaN_l0')"
                                 class="flex items-center gap-2 px-3 py-2 rounded-lg bg-red-500/15 text-red-400 text-xs font-medium hover:bg-red-500/25 transition-colors">
                                 <i class="fab fa-youtube"></i> Watch Demo
                             </button>
@@ -2078,6 +2237,8 @@
         function openVideoModal(videoId) {
             const modal = document.getElementById('videoModal');
             const iframe = document.getElementById('videoIframe');
+            const myDomain = 'https://Vanshmakvana.github.io';
+            iframe.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
             iframe.src = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1&rel=0';
             modal.classList.add('active');
             document.body.style.overflow = 'hidden';
@@ -2171,6 +2332,16 @@
         window.addEventListener('load', () => {
             document.body.style.opacity = '1';
         });
+
+
+
+
+
+        const isTouchDevice = window.matchMedia('(hover: none) and (pointer: coarse)').matches;
+
+        if (isTouchDevice) {
+            document.body.classList.add('touch-device');
+        }
     </script>
 
 </body>
