@@ -667,6 +667,298 @@
             overflow-x: hidden;
             max-width: 100%;
         }
+
+        /* ---------- FIX 1: STABLE HERO TYPING HEIGHT ---------- */
+        /* Prevent mobile auto-scroll by giving the hero h1 a stable min-height */
+        #hero h1 {
+            min-height: 7.5rem;
+        }
+        #heroTyping {
+            display: inline-block;
+            min-height: 1.2em;
+            vertical-align: bottom;
+            overflow-wrap: break-word;
+            word-break: break-word;
+        }
+        @media (max-width: 768px) {
+            #hero h1 {
+                min-height: 9rem;
+            }
+        }
+        @media (max-width: 480px) {
+            #hero h1 {
+                min-height: 10rem;
+            }
+        }
+
+        /* ---------- FIX 2: RECRUITER MODAL SCROLLABLE ---------- */
+        #recruiterModal .modal-content {
+            display: flex;
+            flex-direction: column;
+            max-height: 90vh;
+            overflow: hidden;
+        }
+        #recruiterModal .recruiter-scroll-area {
+            overflow-y: auto;
+            flex: 1;
+            -webkit-overflow-scrolling: touch;
+        }
+        #recruiterModal .recruiter-buttons {
+            flex-shrink: 0;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        @media (max-width: 768px) {
+            #recruiterModal .modal-content {
+                max-height: 85vh;
+                width: calc(100vw - 24px);
+                max-width: calc(100vw - 24px);
+                margin: 12px;
+            }
+        }
+
+        /* ---------- FIX 3: COMPREHENSIVE LIGHT MODE OVERRIDES ---------- */
+
+        /* Section subheadings & labels */
+        body.light-mode .text-blue-400 {
+            color: #2563eb !important;
+        }
+        body.light-mode .text-cyan-400 {
+            color: #0891b2 !important;
+        }
+        body.light-mode .text-purple-400 {
+            color: #7c3aed !important;
+        }
+        body.light-mode .text-green-400 {
+            color: #16a34a !important;
+        }
+        body.light-mode .text-yellow-400 {
+            color: #ca8a04 !important;
+        }
+        body.light-mode .text-red-400 {
+            color: #dc2626 !important;
+        }
+
+        /* Card titles - make them dark in light mode */
+        body.light-mode h3.text-white,
+        body.light-mode h2.text-white,
+        body.light-mode .section-heading.text-white,
+        body.light-mode .font-bold.text-white,
+        body.light-mode .text-white.font-bold {
+            color: #1e293b !important;
+        }
+
+        /* Descriptions and body text */
+        body.light-mode .text-gray-500 {
+            color: #64748b !important;
+        }
+
+        /* Glass cards in light mode - stronger background */
+        body.light-mode .glass {
+            background: rgba(255, 255, 255, 0.75);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+        }
+        body.light-mode .glass-strong {
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(0, 0, 0, 0.12);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Input fields in light mode */
+        body.light-mode input,
+        body.light-mode textarea {
+            color: #1e293b !important;
+            background: rgba(255, 255, 255, 0.8) !important;
+            border-color: rgba(0, 0, 0, 0.15) !important;
+        }
+        body.light-mode input::placeholder,
+        body.light-mode textarea::placeholder {
+            color: #94a3b8 !important;
+        }
+
+        /* Nav links in light mode */
+        body.light-mode .nav-link {
+            color: #475569 !important;
+        }
+        body.light-mode .nav-link:hover,
+        body.light-mode .nav-link.active {
+            color: #1e293b !important;
+        }
+        body.light-mode .mobile-nav-link {
+            color: #475569 !important;
+        }
+        body.light-mode .mobile-nav-link:hover {
+            color: #1e293b !important;
+            background: rgba(0, 0, 0, 0.05) !important;
+        }
+
+        /* Logo text */
+        body.light-mode .font-poppins.font-bold.text-lg .gradient-text {
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Hero section text */
+        body.light-mode #hero .text-gray-200,
+        body.light-mode #hero strong.text-gray-200 {
+            color: #334155 !important;
+        }
+
+        /* Tech pills in light mode */
+        body.light-mode .tech-pill {
+            background: rgba(59, 130, 246, 0.08);
+            color: #1d4ed8;
+            border-color: rgba(59, 130, 246, 0.2);
+        }
+
+        /* Timeline & Experience */
+        body.light-mode .timeline-dot {
+            border-color: #f1f5f9;
+            box-shadow: 0 0 15px rgba(59, 130, 246, 0.3);
+        }
+
+        /* Project & Certificate card content */
+        body.light-mode .project-card h3,
+        body.light-mode .cert-card h3 {
+            color: #1e293b !important;
+        }
+        body.light-mode .project-card .text-gray-400,
+        body.light-mode .cert-card .text-gray-400 {
+            color: #64748b !important;
+        }
+
+        /* Filter buttons in light mode */
+        body.light-mode .filter-btn {
+            color: #475569;
+            background: rgba(255, 255, 255, 0.7);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+        body.light-mode .filter-btn:hover {
+            color: #1e293b;
+            background: rgba(255, 255, 255, 0.9);
+        }
+        body.light-mode .filter-btn.active {
+            color: #fff !important;
+        }
+
+        /* Back to top button */
+        body.light-mode #backToTop {
+            box-shadow: 0 4px 20px rgba(59, 130, 246, 0.3);
+        }
+
+        /* Recruiter badge */
+        body.light-mode .recruiter-badge .glass-strong {
+            background: rgba(255, 255, 255, 0.95);
+            color: #1e293b;
+        }
+
+        /* Recruiter modal light mode */
+        body.light-mode #recruiterModal .modal-content {
+            background: rgba(255, 255, 255, 0.95);
+        }
+        body.light-mode #recruiterModal h3 {
+            color: #1e293b !important;
+        }
+        body.light-mode #recruiterModal .text-white {
+            color: #1e293b !important;
+        }
+        body.light-mode #recruiterModal .text-gray-400 {
+            color: #64748b !important;
+        }
+        body.light-mode #recruiterModal .recruiter-buttons {
+            border-top-color: rgba(0, 0, 0, 0.1);
+        }
+
+        /* Lightbox in light mode */
+        body.light-mode #lightboxModal .text-white {
+            color: #fff !important;
+        }
+
+        /* Contact form in light mode */
+        body.light-mode #contactForm label {
+            color: #334155 !important;
+        }
+
+        /* Footer / bottom section */
+        body.light-mode footer,
+        body.light-mode footer .text-gray-400,
+        body.light-mode footer .text-gray-500 {
+            color: #64748b !important;
+        }
+        body.light-mode footer .text-white {
+            color: #1e293b !important;
+        }
+
+        /* Scrollbar in light mode */
+        body.light-mode ::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, #3b82f6, #6366f1);
+        }
+
+        /* Status badge in hero */
+        body.light-mode .bg-green-400 {
+            background-color: #22c55e !important;
+        }
+
+        /* Gradient text stays gradient in light mode */
+        body.light-mode .gradient-text {
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Profile links / social icons in light mode */
+        body.light-mode a.text-gray-300 {
+            color: #475569 !important;
+        }
+        body.light-mode a.text-gray-300:hover {
+            color: #1e293b !important;
+        }
+
+        /* About section / Stats / Interest items */
+        body.light-mode .text-2xl.text-white,
+        body.light-mode .text-3xl.text-white,
+        body.light-mode .text-4xl.text-white,
+        body.light-mode .text-5xl.text-white {
+            color: #1e293b !important;
+        }
+
+        /* Typing cursor in light mode */
+        body.light-mode .typing-cursor::after {
+            color: #2563eb;
+        }
+
+        /* Certificate filter buttons container */
+        .cert-filter-btn {
+            transition: all 0.3s ease;
+        }
+        .cert-filter-btn.active {
+            background: linear-gradient(135deg, #3b82f6, #6366f1) !important;
+            color: #fff !important;
+            box-shadow: 0 4px 20px rgba(59, 130, 246, 0.4);
+        }
+        body.light-mode .cert-filter-btn {
+            color: #475569;
+            background: rgba(255, 255, 255, 0.7);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+        body.light-mode .cert-filter-btn:hover {
+            color: #1e293b;
+            background: rgba(255, 255, 255, 0.9);
+        }
+        body.light-mode .cert-filter-btn.active {
+            color: #fff !important;
+        }
+
+        /* Skills section icons/text in light mode */
+        body.light-mode .from-blue-500\/20,
+        body.light-mode .from-cyan-500\/20,
+        body.light-mode .from-purple-500\/20,
+        body.light-mode .from-green-500\/20 {
+            color: #1e293b !important;
+        }
+
+        /* Interest cards hover states */
+        body.light-mode .hover\:bg-white\/5:hover {
+            background: rgba(0, 0, 0, 0.05) !important;
+        }
     </style>
 </head>
 
@@ -2086,7 +2378,7 @@
     <section id="certificates" class="relative py-24 md:py-32">
         <div class="orb w-[400px] h-[400px] bg-yellow-600 top-20 -left-40" style="position:absolute;"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6">
-            <div class="text-center mb-16">
+            <div class="text-center mb-10">
                 <p class="text-blue-400 font-medium text-sm tracking-wider uppercase mb-3" data-aos="fade-up">
                     Achievements</p>
                 <h2 class="section-heading font-poppins font-bold text-3xl sm:text-4xl text-white" data-aos="fade-up"
@@ -2095,11 +2387,27 @@
                 </h2>
             </div>
 
-            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Category Filters for Certificates -->
+            <div class="flex flex-wrap items-center justify-center gap-2 mb-10" data-aos="fade-up" data-aos-delay="200">
+                <button class="cert-filter-btn active glass px-4 py-2 rounded-xl text-sm text-gray-300 hover:text-white transition-all"
+                    data-cert-filter="all" onclick="filterCertificates('all', this)">All</button>
+                <button class="cert-filter-btn glass px-4 py-2 rounded-xl text-sm text-gray-300 hover:text-white transition-all"
+                    data-cert-filter="course" onclick="filterCertificates('course', this)">Course Completion</button>
+                <button class="cert-filter-btn glass px-4 py-2 rounded-xl text-sm text-gray-300 hover:text-white transition-all"
+                    data-cert-filter="internship" onclick="filterCertificates('internship', this)">Internship</button>
+                <button class="cert-filter-btn glass px-4 py-2 rounded-xl text-sm text-gray-300 hover:text-white transition-all"
+                    data-cert-filter="event" onclick="filterCertificates('event', this)">Event Participation</button>
+                <button class="cert-filter-btn glass px-4 py-2 rounded-xl text-sm text-gray-300 hover:text-white transition-all"
+                    data-cert-filter="test" onclick="filterCertificates('test', this)">Test & Quiz</button>
+                <button class="cert-filter-btn glass px-4 py-2 rounded-xl text-sm text-gray-300 hover:text-white transition-all"
+                    data-cert-filter="other" onclick="filterCertificates('other', this)">Other</button>
+            </div>
+
+            <div id="certGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
                 <!-- Certificate Card 1 -->
                 <!-- 🔧 CUSTOMIZE: Replace certificate details, image URLs, and verify links -->
-                <div class="glass rounded-2xl overflow-hidden card-hover" data-aos="fade-up" data-aos-delay="100">
+                <div class="cert-card glass rounded-2xl overflow-hidden card-hover" data-category="course" data-aos="fade-up" data-aos-delay="100">
                     <div class="h-44 overflow-hidden relative group cursor-pointer" onclick="openLightbox(this)">
                         <img src="Tata_Forage/GenAI Powered Data Analytics Job Simulation.png"
                             alt="GenAI Powered Data Analytics Job Simulation"
@@ -2126,7 +2434,7 @@
                 </div>
 
                 <!-- Certificate Card 2 -->
-                <div class="glass rounded-2xl overflow-hidden card-hover" data-aos="fade-up" data-aos-delay="200">
+                <div class="cert-card glass rounded-2xl overflow-hidden card-hover" data-category="course" data-aos="fade-up" data-aos-delay="200">
                     <div class="h-44 overflow-hidden relative group cursor-pointer" onclick="openLightbox(this)">
                         <img src="Tata_Forage/Cybersecurity Analyst Job Simulation.png"
                             alt="Cybersecurity Analyst Job Simulation"
@@ -2152,7 +2460,7 @@
                 </div>
 
                 <!-- Certificate Card 3 -->
-                <div class="glass rounded-2xl overflow-hidden card-hover" data-aos="fade-up" data-aos-delay="300">
+                <div class="cert-card glass rounded-2xl overflow-hidden card-hover" data-category="course" data-aos="fade-up" data-aos-delay="300">
                     <div class="h-44 overflow-hidden relative group cursor-pointer" onclick="openLightbox(this)">
                         <img src="Tata_Forage/ESG Job Simulation.png" alt="ESG Job Simulation"
                             class="project-screenshot transition-transform duration-500 group-hover:scale-110"
@@ -2177,7 +2485,7 @@
                 </div>
 
                 <!-- Certificate Card 4 -->
-                <div class="glass rounded-2xl overflow-hidden card-hover" data-aos="fade-up" data-aos-delay="100">
+                <div class="cert-card glass rounded-2xl overflow-hidden card-hover" data-category="event" data-aos="fade-up" data-aos-delay="100">
                     <div class="h-44 overflow-hidden relative group cursor-pointer" onclick="openLightbox(this)">
                         <img src="Google_Developer_Group_Event/GDG Event.png" alt="Google Developer Group Event"
                             class="project-screenshot transition-transform duration-500 group-hover:scale-110"
@@ -2201,7 +2509,7 @@
                 </div>
 
                 <!-- Certificate Card 5 -->
-                <div class="glass rounded-2xl overflow-hidden card-hover" data-aos="fade-up" data-aos-delay="200">
+                <div class="cert-card glass rounded-2xl overflow-hidden card-hover" data-category="course" data-aos="fade-up" data-aos-delay="200">
                     <div class="h-44 overflow-hidden relative group cursor-pointer" onclick="openLightbox(this)">
                         <img src="Cisco_Academy/Introduction to Cybersecurity.png" alt="Introduction to Cybersecurity"
                             class="project-screenshot transition-transform duration-500 group-hover:scale-110"
@@ -2226,7 +2534,7 @@
                 </div>
 
                 <!-- Certificate Card 6 -->
-                <div class="glass rounded-2xl overflow-hidden card-hover" data-aos="fade-up" data-aos-delay="300">
+                <div class="cert-card glass rounded-2xl overflow-hidden card-hover" data-category="course" data-aos="fade-up" data-aos-delay="300">
                     <div class="h-44 overflow-hidden relative group cursor-pointer" onclick="openLightbox(this)">
                         <img src="Cisco_Academy/Cyber Threat Management.png" alt="Cyber Threat Management"
                             class="project-screenshot transition-transform duration-500 group-hover:scale-110"
@@ -2254,7 +2562,7 @@
                 </div>
 
                 <!-- Certificate Card 7 -->
-                <div class="glass rounded-2xl overflow-hidden card-hover" data-aos="fade-up" data-aos-delay="300">
+                <div class="cert-card glass rounded-2xl overflow-hidden card-hover" data-category="test" data-aos="fade-up" data-aos-delay="300">
                     <div class="h-44 overflow-hidden relative group cursor-pointer" onclick="openLightbox(this)">
                         <img src="NCAI_NCAT_Test_Participation/Vansh_Makvana_nc_ai_ncat_participation_may_2026_Certificate.png"
                             alt="NCAI NCAT Test Participation"
@@ -2283,7 +2591,7 @@
                 </div>
 
                 <!-- Certificate Card 8 -->
-                <div class="glass rounded-2xl overflow-hidden card-hover" data-aos="fade-up" data-aos-delay="300">
+                <div class="cert-card glass rounded-2xl overflow-hidden card-hover" data-category="event" data-aos="fade-up" data-aos-delay="300">
                     <div class="h-44 overflow-hidden relative group cursor-pointer" onclick="openLightbox(this)">
                         <img src="All_India_Career_Summit_Participation/Participation Certificate - Vansh Prafulbhai Makvana (All India Career Summit by Aptus Technologies 28-06-2026).png"
                             alt="All India Career Summit Participation"
@@ -2312,7 +2620,7 @@
                 </div>
 
                 <!-- Certificate Card 9 -->
-                <div class="glass rounded-2xl overflow-hidden card-hover" data-aos="fade-up" data-aos-delay="300">
+                <div class="cert-card glass rounded-2xl overflow-hidden card-hover" data-category="test" data-aos="fade-up" data-aos-delay="300">
                     <div class="h-44 overflow-hidden relative group cursor-pointer" onclick="openLightbox(this)">
                         <img src="Geography_GK_test/GK Test of Geography.png" alt="GK Test of Geography"
                             class="project-screenshot transition-transform duration-500 group-hover:scale-110"
@@ -2340,7 +2648,7 @@
                 </div>
 
                 <!-- Certificate Card 10 -->
-                <div class="glass rounded-2xl overflow-hidden card-hover" data-aos="fade-up" data-aos-delay="300">
+                <div class="cert-card glass rounded-2xl overflow-hidden card-hover" data-category="course" data-aos="fade-up" data-aos-delay="300">
                     <div class="h-44 overflow-hidden relative group cursor-pointer" onclick="openLightbox(this)">
                         <img src="Internship_Course_Completion/deep-dive-with-infotact-on-sde-mern-full-stack-certificate-for-Vansh Prafulbhai Makvana.jpg"
                             alt="deep dive with infotact on sde mern full stack certificate for Vansh Prafulbhai Makvana"
@@ -2369,7 +2677,7 @@
                 </div>
 
                 <!-- Certificate Card 11 -->
-                <div class="glass rounded-2xl overflow-hidden card-hover" data-aos="fade-up" data-aos-delay="300">
+                <div class="cert-card glass rounded-2xl overflow-hidden card-hover" data-category="test" data-aos="fade-up" data-aos-delay="300">
                     <div class="h-44 overflow-hidden relative group cursor-pointer" onclick="openLightbox(this)">
                         <img src="Infotact_Solutions_Test_Participation/Vansh Prafulbhai Makvana Certificate (Infotact Solutions Test Participation).png"
                             alt="Infotact Solutions Test Participation"
@@ -2398,7 +2706,7 @@
                 </div>
 
                 <!-- Certificate Card 12 -->
-                <div class="glass rounded-2xl overflow-hidden card-hover" data-aos="fade-up" data-aos-delay="300">
+                <div class="cert-card glass rounded-2xl overflow-hidden card-hover" data-category="course" data-aos="fade-up" data-aos-delay="300">
                     <div class="h-44 overflow-hidden relative group cursor-pointer" onclick="openLightbox(this)">
                         <img src="MinnaLearn/Elements of AI.png" alt="Elements of AI"
                             class="project-screenshot transition-transform duration-500 group-hover:scale-110"
@@ -2425,8 +2733,8 @@
                     </div>
                 </div>
 
-                <!-- Certificate Card 14 -->
-                <div class="glass rounded-2xl overflow-hidden card-hover" data-aos="fade-up" data-aos-delay="300">
+                <!-- Certificate Card 13 -->
+                <div class="cert-card glass rounded-2xl overflow-hidden card-hover" data-category="test" data-aos="fade-up" data-aos-delay="300">
                     <div class="h-44 overflow-hidden relative group cursor-pointer" onclick="openLightbox(this)">
                         <img src="Mathematics_Day_Test/National Mathematics Day Test Certificate.png"
                             alt="National Mathematics Day Test Certificate"
@@ -2455,7 +2763,7 @@
                 </div>
 
                 <!-- Certificate Card 14 -->
-                <div class="glass rounded-2xl overflow-hidden card-hover" data-aos="fade-up" data-aos-delay="300">
+                <div class="cert-card glass rounded-2xl overflow-hidden card-hover" data-category="event" data-aos="fade-up" data-aos-delay="300">
                     <div class="h-44 overflow-hidden relative group cursor-pointer" onclick="openLightbox(this)">
                         <img src="VVP_Project_Fair_Participation/Vansh_Makvana_VVP_Project_Fair_Participation_Certificate.png"
                             alt="VVP Project Fair Participation Certificate"
@@ -2484,7 +2792,7 @@
                 </div>
 
                 <!-- Certificate Card 15 -->
-                <div class="glass rounded-2xl overflow-hidden card-hover" data-aos="fade-up" data-aos-delay="300">
+                <div class="cert-card glass rounded-2xl overflow-hidden card-hover" data-category="test" data-aos="fade-up" data-aos-delay="300">
                     <div class="h-44 overflow-hidden relative group cursor-pointer" onclick="openLightbox(this)">
                         <img src="SLTIET_Computer_Test/Computer Based Test Completion by SLTIET.png"
                             alt="Computer Based Test Completion by SLTIET"
@@ -2513,7 +2821,7 @@
                 </div>
 
                 <!-- Certificate Card 16 -->
-                <div class="glass rounded-2xl overflow-hidden card-hover" data-aos="fade-up" data-aos-delay="300">
+                <div class="cert-card glass rounded-2xl overflow-hidden card-hover" data-category="event" data-aos="fade-up" data-aos-delay="300">
                     <div class="h-44 overflow-hidden relative group cursor-pointer" onclick="openLightbox(this)">
                         <img src="College_Tech_Fest_2025/Code Jutsu Event.png" alt="Code Jutsu Event Certificate"
                             class="project-screenshot transition-transform duration-500 group-hover:scale-110"
@@ -2541,7 +2849,7 @@
                 </div>
 
                 <!-- Certificate Card 17 -->
-                <div class="glass rounded-2xl overflow-hidden card-hover" data-aos="fade-up" data-aos-delay="300">
+                <div class="cert-card glass rounded-2xl overflow-hidden card-hover" data-category="event" data-aos="fade-up" data-aos-delay="300">
                     <div class="h-44 overflow-hidden relative group cursor-pointer" onclick="openLightbox(this)">
                         <img src="College_Tech_Fest_2025/Counter Strike Event.png" alt="Counter Strike Event"
                             class="project-screenshot transition-transform duration-500 group-hover:scale-110"
@@ -2569,7 +2877,7 @@
                 </div>
 
                 <!-- Certificate Card 18 -->
-                <div class="glass rounded-2xl overflow-hidden card-hover" data-aos="fade-up" data-aos-delay="300">
+                <div class="cert-card glass rounded-2xl overflow-hidden card-hover" data-category="event" data-aos="fade-up" data-aos-delay="300">
                     <div class="h-44 overflow-hidden relative group cursor-pointer" onclick="openLightbox(this)">
                         <img src="College_Tech_Fest_2025/Gully Cricket Event.png" alt="Gully Cricket Event"
                             class="project-screenshot transition-transform duration-500 group-hover:scale-110"
@@ -2597,7 +2905,7 @@
                 </div>
 
                 <!-- Certificate Card 19 -->
-                <div class="glass rounded-2xl overflow-hidden card-hover" data-aos="fade-up" data-aos-delay="300">
+                <div class="cert-card glass rounded-2xl overflow-hidden card-hover" data-category="event" data-aos="fade-up" data-aos-delay="300">
                     <div class="h-44 overflow-hidden relative group cursor-pointer" onclick="openLightbox(this)">
                         <img src="College_Tech_Fest_2025/Squid AI Event.png" alt="Squid AI Event"
                             class="project-screenshot transition-transform duration-500 group-hover:scale-110"
@@ -2625,7 +2933,7 @@
                 </div>
 
                 <!-- Certificate Card 20 -->
-                <div class="glass rounded-2xl overflow-hidden card-hover" data-aos="fade-up" data-aos-delay="300">
+                <div class="cert-card glass rounded-2xl overflow-hidden card-hover" data-category="other" data-aos="fade-up" data-aos-delay="300">
                     <div class="h-44 overflow-hidden relative group cursor-pointer" onclick="openLightbox(this)">
                         <img src="My_Bharat_Portal_Registration_Certificate/My Bharat Portal Registration Certificate.png"
                             alt="My Bharat Portal Registration Certificate"
@@ -2654,7 +2962,7 @@
                 </div>
 
                 <!-- Certificate Card 21 -->
-                <div class="glass rounded-2xl overflow-hidden card-hover" data-aos="fade-up" data-aos-delay="300">
+                <div class="cert-card glass rounded-2xl overflow-hidden card-hover" data-category="other" data-aos="fade-up" data-aos-delay="300">
                     <div class="h-44 overflow-hidden relative group cursor-pointer" onclick="openLightbox(this)">
                         <img src="Nasha_Mukt_Bharat_Participation_Certificate/nasha_mukt_certificate.png"
                             alt="Nasha Mukt Bharat Participation Certificate"
@@ -2683,7 +2991,7 @@
                 </div>
 
                 <!-- Certificate Card 22 -->
-                <div class="glass rounded-2xl overflow-hidden card-hover" data-aos="fade-up" data-aos-delay="300">
+                <div class="cert-card glass rounded-2xl overflow-hidden card-hover" data-category="test" data-aos="fade-up" data-aos-delay="300">
                     <div class="h-44 overflow-hidden relative group cursor-pointer" onclick="openLightbox(this)">
                         <img src="National_Space_Day_2026_Quiz_Participation/Vansh Makvana.png"
                             alt="National Space Day 2026 Quiz Participation"
@@ -2712,7 +3020,7 @@
                 </div>
 
                 <!-- Certificate Card 23 -->
-                <div class="glass rounded-2xl overflow-hidden card-hover" data-aos="fade-up" data-aos-delay="300">
+                <div class="cert-card glass rounded-2xl overflow-hidden card-hover" data-category="course" data-aos="fade-up" data-aos-delay="300">
                     <div class="h-44 overflow-hidden relative group cursor-pointer" onclick="openLightbox(this)">
                         <img src="JioPC_AI_Classroom_AI_FOundation_Course_Completion/AI_FOundation_Course_Completion.jpg"
                             alt="AI FOundation Course Completion"
@@ -2741,7 +3049,7 @@
                 </div>
 
                 <!-- Certificate Card 24 -->
-                <div class="glass rounded-2xl overflow-hidden card-hover" data-aos="fade-up" data-aos-delay="300">
+                <div class="cert-card glass rounded-2xl overflow-hidden card-hover" data-category="internship" data-aos="fade-up" data-aos-delay="300">
                     <div class="h-44 overflow-hidden relative group cursor-pointer" onclick="openLightbox(this)">
                         <img src="3_months_Infotact_Solutions_Internship_Completion/Vansh Prafulbhai Makvana-Internship Completion.jpg"
                             alt="3 months Infotact Solutions Internship Completion"
@@ -2770,7 +3078,7 @@
                 </div>
 
                 <!-- Certificate Card 25 -->
-                <div class="glass rounded-2xl overflow-hidden card-hover" data-aos="fade-up" data-aos-delay="300">
+                <div class="cert-card glass rounded-2xl overflow-hidden card-hover" data-category="internship" data-aos="fade-up" data-aos-delay="300">
                     <div class="h-44 overflow-hidden relative group cursor-pointer" onclick="openLightbox(this)">
                         <img src="3_months_Infotact_Solutions_Internship_Completion/Vansh Prafulbhai Makvana-Training.jpg"
                             alt="3 months Infotact Solutions Internship Training Completion"
@@ -2990,69 +3298,81 @@
     <!-- ================================================================ -->
     <!--            RECRUITER QUICK SUMMARY MODAL (Req 12)                 -->
     <!-- ================================================================ -->
+    <!-- ================================================================ -->
+    <!--            RECRUITER QUICK SUMMARY MODAL (Req 12)                 -->
+    <!-- ================================================================ -->
     <div id="recruiterModal" class="modal-overlay" onclick="closeRecruiterModal(event)">
-        <div class="modal-content glass-strong rounded-3x1 p-8 sm:p-10 max-w-lg mx-4 text-center"
+        <div class="modal-content glass-strong rounded-3xl p-6 sm:p-8 max-w-lg mx-4 text-center"
             onclick="event.stopPropagation()">
-            <div
-                class="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-white text-2xl mx-auto mb-6">
-                <i class="fas fa-briefcase"></i>
-            </div>
-            <h3 class="font-poppins font-bold text-2xl text-white mb-2">Quick Recruiter Summary</h3>
-            <p class="text-blue-400 text-sm font-medium mb-6">1-Minute Pitch</p>
+            
+            <!-- Scrollable Content Area -->
+            <div class="recruiter-scroll-area pr-1">
+                <div
+                    class="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-white text-2xl mx-auto mb-4">
+                    <i class="fas fa-briefcase"></i>
+                </div>
+                <h3 class="font-poppins font-bold text-2xl text-white mb-1">Quick Recruiter Summary</h3>
+                <p class="text-blue-400 text-sm font-medium mb-6">1-Minute Pitch</p>
 
-            <div class="text-left space-y-4 mb-8">
-                <!-- 🔧 CUSTOMIZE: Replace with your actual details -->
-                <div class="flex items-start gap-3">
-                    <i class="fas fa-user-graduate text-blue-400 mt-1"></i>
-                    <div>
-                        <p class="text-white font-semibold text-sm">Education</p>
-                        <p class="text-gray-400 text-sm">Diploma in Information Technology - Gujarat Technological
-                            University (CGPA: 7.53)</p>
-                        <br>
-                        <p class="text-gray-400 text-sm">Bachelor of Engineering in Information Technology - Gujarat
-                            Technological University (CPI: 7.01)</p>
+                <div class="text-left space-y-4 mb-6">
+                    <!-- 🔧 CUSTOMIZE: Replace with your actual details -->
+                    <div class="flex items-start gap-3">
+                        <i class="fas fa-user-graduate text-blue-400 mt-1"></i>
+                        <div>
+                            <p class="text-white font-semibold text-sm">Education</p>
+                            <p class="text-gray-400 text-sm">Diploma in Information Technology - Gujarat Technological
+                                University (CGPA: 7.53)</p>
+                            <br>
+                            <p class="text-gray-400 text-sm">Bachelor of Engineering in Information Technology - Gujarat
+                                Technological University (CPI: 7.01)</p>
+                        </div>
                     </div>
-                </div>
-                <div class="flex items-start gap-3">
-                    <i class="fas fa-code text-cyan-400 mt-1"></i>
-                    <div>
-                        <p class="text-white font-semibold text-sm">Core Skills</p>
-                        <p class="text-gray-400 text-sm">Java, Basic Python, C, HTML, CSS, JavaScript, Bootstrap, React,
-                            Node.js, Flutter, MongoDB</p>
+                    <div class="flex items-start gap-3">
+                        <i class="fas fa-code text-cyan-400 mt-1"></i>
+                        <div>
+                            <p class="text-white font-semibold text-sm">Core Skills</p>
+                            <p class="text-gray-400 text-sm">Java, Basic Python, C, HTML, CSS, JavaScript, Bootstrap, React,
+                                Node.js, Flutter, MongoDB</p>
+                        </div>
                     </div>
-                </div>
-                <div class="flex items-start gap-3">
-                    <i class="fas fa-briefcase text-purple-400 mt-1"></i>
-                    <div>
-                        <p class="text-white font-semibold text-sm">Experience</p>
-                        <p class="text-gray-400 text-sm">3 months internship at Infotact Solutions company in MERN Stack
-                            Web Development</p>
+                    <div class="flex items-start gap-3">
+                        <i class="fas fa-briefcase text-purple-400 mt-1"></i>
+                        <div>
+                            <p class="text-white font-semibold text-sm">Experience</p>
+                            <p class="text-gray-400 text-sm">3 months internship at Infotact Solutions company in MERN Stack
+                                Web Development</p>
+                        </div>
                     </div>
-                </div>
 
-                <div class="flex items-start gap-3">
-                    <i class="fas fa-map-marker-alt text-green-400 mt-1"></i>
-                    <div>
-                        <p class="text-white font-semibold text-sm">Availability</p>
-                        <p class="text-gray-400 text-sm">Open for full-time & remote roles • Willing to relocate</p>
+                    <div class="flex items-start gap-3">
+                        <i class="fas fa-map-marker-alt text-green-400 mt-1"></i>
+                        <div>
+                            <p class="text-white font-semibold text-sm">Availability</p>
+                            <p class="text-gray-400 text-sm">Open for full-time & remote roles • Willing to relocate</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="flex flex-col sm:flex-row gap-3">
-                <a href="mailto:vanshmakvana2@gmail.com"
-                    class="flex-1 py-3 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold text-sm text-center hover:shadow-lg transition-all">
-                    <i class="fas fa-envelope mr-2"></i>Email Me
-                </a>
-                <a href="https://drive.google.com/file/d/1hYNDo3-IfbQBaZd-OE7lI1zX_drkO50Z/view?usp=sharing"
-                    target="_blank" rel="noopener"
-                    class="flex-1 py-3 rounded-xl glass text-white font-semibold text-sm text-center hover:bg-white/10 transition-all">
-                    <i class="fas fa-download mr-2"></i>Resume
-                </a>
             </div>
 
-            <button onclick="closeRecruiterModal(event, true)"
-                class="mt-4 text-gray-500 hover:text-gray-300 text-sm transition-colors">Close</button>
+            <!-- Always Visible Action Buttons Container -->
+            <div class="recruiter-buttons mt-4 pt-4">
+                <div class="flex flex-col sm:flex-row gap-3">
+                    <a href="mailto:vanshmakvana2@gmail.com"
+                        class="flex-1 py-3 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold text-sm text-center hover:shadow-lg transition-all">
+                        <i class="fas fa-envelope mr-2"></i>Email Me
+                    </a>
+                    <a href="https://drive.google.com/file/d/1hYNDo3-IfbQBaZd-OE7lI1zX_drkO50Z/view?usp=sharing"
+                        target="_blank" rel="noopener"
+                        class="flex-1 py-3 rounded-xl glass text-white font-semibold text-sm text-center hover:bg-white/10 transition-all">
+                        <i class="fas fa-download mr-2"></i>Download Resume
+                    </a>
+                    <button onclick="closeRecruiterModal(event, true)"
+                        class="sm:px-4 py-3 rounded-xl glass text-gray-300 font-semibold text-sm text-center hover:bg-white/10 transition-all">
+                        Close
+                    </button>
+                </div>
+            </div>
+
         </div>
     </div>
 
@@ -3306,6 +3626,32 @@
             }
         });
 
+        // ============ CERTIFICATE FILTER SYSTEM ============
+        function filterCertificates(category, btnEl) {
+            document.querySelectorAll('.cert-filter-btn').forEach(b => b.classList.remove('active'));
+            if (btnEl) btnEl.classList.add('active');
+
+            const certs = document.querySelectorAll('#certGrid .cert-card');
+            certs.forEach(cert => {
+                const certCategory = cert.getAttribute('data-category');
+                if (category === 'all' || certCategory === category) {
+                    cert.style.display = '';
+                    cert.style.opacity = '0';
+                    cert.style.transform = 'translateY(20px)';
+                    setTimeout(() => {
+                        cert.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+                        cert.style.opacity = '1';
+                        cert.style.transform = 'translateY(0)';
+                    }, 50);
+                } else {
+                    cert.style.display = 'none';
+                }
+            });
+            if (typeof AOS !== 'undefined') {
+                AOS.refresh();
+            }
+        }
+
         // ============ YOUTUBE VIDEO MODAL (Facade pattern - Req 1) ============
         function openVideoModal(videoId) {
             const modal = document.getElementById('videoModal');
@@ -3349,8 +3695,11 @@
 
         // ============ RECRUITER MODAL (Req 12) ============
         function openRecruiterModal() {
-            document.getElementById('recruiterModal').classList.add('active');
+            const modal = document.getElementById('recruiterModal');
+            modal.classList.add('active');
             document.body.style.overflow = 'hidden';
+            const scrollArea = modal.querySelector('.recruiter-scroll-area');
+            if (scrollArea) scrollArea.scrollTop = 0;
         }
         function closeRecruiterModal(e, force) {
             if (force || e.target === document.getElementById('recruiterModal')) {
