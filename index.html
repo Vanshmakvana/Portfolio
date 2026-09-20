@@ -673,6 +673,7 @@
         #hero h1 {
             min-height: 7.5rem;
         }
+
         #heroTyping {
             display: inline-block;
             min-height: 1.2em;
@@ -680,11 +681,13 @@
             overflow-wrap: break-word;
             word-break: break-word;
         }
+
         @media (max-width: 768px) {
             #hero h1 {
                 min-height: 9rem;
             }
         }
+
         @media (max-width: 480px) {
             #hero h1 {
                 min-height: 10rem;
@@ -698,16 +701,19 @@
             max-height: 90vh;
             overflow: hidden;
         }
+
         #recruiterModal .recruiter-scroll-area {
             overflow-y: auto;
             flex: 1;
             -webkit-overflow-scrolling: touch;
         }
+
         #recruiterModal .recruiter-buttons {
             flex-shrink: 0;
             padding-top: 1rem;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
+
         @media (max-width: 768px) {
             #recruiterModal .modal-content {
                 max-height: 85vh;
@@ -723,18 +729,23 @@
         body.light-mode .text-blue-400 {
             color: #2563eb !important;
         }
+
         body.light-mode .text-cyan-400 {
             color: #0891b2 !important;
         }
+
         body.light-mode .text-purple-400 {
             color: #7c3aed !important;
         }
+
         body.light-mode .text-green-400 {
             color: #16a34a !important;
         }
+
         body.light-mode .text-yellow-400 {
             color: #ca8a04 !important;
         }
+
         body.light-mode .text-red-400 {
             color: #dc2626 !important;
         }
@@ -759,6 +770,7 @@
             border: 1px solid rgba(0, 0, 0, 0.1);
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
         }
+
         body.light-mode .glass-strong {
             background: rgba(255, 255, 255, 0.9);
             border: 1px solid rgba(0, 0, 0, 0.12);
@@ -772,6 +784,7 @@
             background: rgba(255, 255, 255, 0.8) !important;
             border-color: rgba(0, 0, 0, 0.15) !important;
         }
+
         body.light-mode input::placeholder,
         body.light-mode textarea::placeholder {
             color: #94a3b8 !important;
@@ -781,13 +794,16 @@
         body.light-mode .nav-link {
             color: #475569 !important;
         }
+
         body.light-mode .nav-link:hover,
         body.light-mode .nav-link.active {
             color: #1e293b !important;
         }
+
         body.light-mode .mobile-nav-link {
             color: #475569 !important;
         }
+
         body.light-mode .mobile-nav-link:hover {
             color: #1e293b !important;
             background: rgba(0, 0, 0, 0.05) !important;
@@ -822,6 +838,7 @@
         body.light-mode .cert-card h3 {
             color: #1e293b !important;
         }
+
         body.light-mode .project-card .text-gray-400,
         body.light-mode .cert-card .text-gray-400 {
             color: #64748b !important;
@@ -833,10 +850,12 @@
             background: rgba(255, 255, 255, 0.7);
             border: 1px solid rgba(0, 0, 0, 0.1);
         }
+
         body.light-mode .filter-btn:hover {
             color: #1e293b;
             background: rgba(255, 255, 255, 0.9);
         }
+
         body.light-mode .filter-btn.active {
             color: #fff !important;
         }
@@ -856,15 +875,19 @@
         body.light-mode #recruiterModal .modal-content {
             background: rgba(255, 255, 255, 0.95);
         }
+
         body.light-mode #recruiterModal h3 {
             color: #1e293b !important;
         }
+
         body.light-mode #recruiterModal .text-white {
             color: #1e293b !important;
         }
+
         body.light-mode #recruiterModal .text-gray-400 {
             color: #64748b !important;
         }
+
         body.light-mode #recruiterModal .recruiter-buttons {
             border-top-color: rgba(0, 0, 0, 0.1);
         }
@@ -885,6 +908,7 @@
         body.light-mode footer .text-gray-500 {
             color: #64748b !important;
         }
+
         body.light-mode footer .text-white {
             color: #1e293b !important;
         }
@@ -908,6 +932,7 @@
         body.light-mode a.text-gray-300 {
             color: #475569 !important;
         }
+
         body.light-mode a.text-gray-300:hover {
             color: #1e293b !important;
         }
@@ -929,20 +954,24 @@
         .cert-filter-btn {
             transition: all 0.3s ease;
         }
+
         .cert-filter-btn.active {
             background: linear-gradient(135deg, #3b82f6, #6366f1) !important;
             color: #fff !important;
             box-shadow: 0 4px 20px rgba(59, 130, 246, 0.4);
         }
+
         body.light-mode .cert-filter-btn {
             color: #475569;
             background: rgba(255, 255, 255, 0.7);
             border: 1px solid rgba(0, 0, 0, 0.1);
         }
+
         body.light-mode .cert-filter-btn:hover {
             color: #1e293b;
             background: rgba(255, 255, 255, 0.9);
         }
+
         body.light-mode .cert-filter-btn.active {
             color: #fff !important;
         }
@@ -2389,17 +2418,23 @@
 
             <!-- Category Filters for Certificates -->
             <div class="flex flex-wrap items-center justify-center gap-2 mb-10" data-aos="fade-up" data-aos-delay="200">
-                <button class="cert-filter-btn active glass px-4 py-2 rounded-xl text-sm text-gray-300 hover:text-white transition-all"
+                <button
+                    class="cert-filter-btn active glass px-4 py-2 rounded-xl text-sm text-gray-300 hover:text-white transition-all"
                     data-cert-filter="all" onclick="filterCertificates('all', this)">All</button>
-                <button class="cert-filter-btn glass px-4 py-2 rounded-xl text-sm text-gray-300 hover:text-white transition-all"
+                <button
+                    class="cert-filter-btn glass px-4 py-2 rounded-xl text-sm text-gray-300 hover:text-white transition-all"
                     data-cert-filter="course" onclick="filterCertificates('course', this)">Course Completion</button>
-                <button class="cert-filter-btn glass px-4 py-2 rounded-xl text-sm text-gray-300 hover:text-white transition-all"
+                <button
+                    class="cert-filter-btn glass px-4 py-2 rounded-xl text-sm text-gray-300 hover:text-white transition-all"
                     data-cert-filter="internship" onclick="filterCertificates('internship', this)">Internship</button>
-                <button class="cert-filter-btn glass px-4 py-2 rounded-xl text-sm text-gray-300 hover:text-white transition-all"
+                <button
+                    class="cert-filter-btn glass px-4 py-2 rounded-xl text-sm text-gray-300 hover:text-white transition-all"
                     data-cert-filter="event" onclick="filterCertificates('event', this)">Event Participation</button>
-                <button class="cert-filter-btn glass px-4 py-2 rounded-xl text-sm text-gray-300 hover:text-white transition-all"
+                <button
+                    class="cert-filter-btn glass px-4 py-2 rounded-xl text-sm text-gray-300 hover:text-white transition-all"
                     data-cert-filter="test" onclick="filterCertificates('test', this)">Test & Quiz</button>
-                <button class="cert-filter-btn glass px-4 py-2 rounded-xl text-sm text-gray-300 hover:text-white transition-all"
+                <button
+                    class="cert-filter-btn glass px-4 py-2 rounded-xl text-sm text-gray-300 hover:text-white transition-all"
                     data-cert-filter="other" onclick="filterCertificates('other', this)">Other</button>
             </div>
 
@@ -2407,7 +2442,8 @@
 
                 <!-- Certificate Card 1 -->
                 <!-- 🔧 CUSTOMIZE: Replace certificate details, image URLs, and verify links -->
-                <div class="cert-card glass rounded-2xl overflow-hidden card-hover" data-category="course" data-aos="fade-up" data-aos-delay="100">
+                <div class="cert-card glass rounded-2xl overflow-hidden card-hover" data-category="course"
+                    data-aos="fade-up" data-aos-delay="100">
                     <div class="h-44 overflow-hidden relative group cursor-pointer" onclick="openLightbox(this)">
                         <img src="Tata_Forage/GenAI Powered Data Analytics Job Simulation.png"
                             alt="GenAI Powered Data Analytics Job Simulation"
@@ -2434,7 +2470,8 @@
                 </div>
 
                 <!-- Certificate Card 2 -->
-                <div class="cert-card glass rounded-2xl overflow-hidden card-hover" data-category="course" data-aos="fade-up" data-aos-delay="200">
+                <div class="cert-card glass rounded-2xl overflow-hidden card-hover" data-category="course"
+                    data-aos="fade-up" data-aos-delay="200">
                     <div class="h-44 overflow-hidden relative group cursor-pointer" onclick="openLightbox(this)">
                         <img src="Tata_Forage/Cybersecurity Analyst Job Simulation.png"
                             alt="Cybersecurity Analyst Job Simulation"
@@ -2460,7 +2497,8 @@
                 </div>
 
                 <!-- Certificate Card 3 -->
-                <div class="cert-card glass rounded-2xl overflow-hidden card-hover" data-category="course" data-aos="fade-up" data-aos-delay="300">
+                <div class="cert-card glass rounded-2xl overflow-hidden card-hover" data-category="course"
+                    data-aos="fade-up" data-aos-delay="300">
                     <div class="h-44 overflow-hidden relative group cursor-pointer" onclick="openLightbox(this)">
                         <img src="Tata_Forage/ESG Job Simulation.png" alt="ESG Job Simulation"
                             class="project-screenshot transition-transform duration-500 group-hover:scale-110"
@@ -2485,7 +2523,8 @@
                 </div>
 
                 <!-- Certificate Card 4 -->
-                <div class="cert-card glass rounded-2xl overflow-hidden card-hover" data-category="event" data-aos="fade-up" data-aos-delay="100">
+                <div class="cert-card glass rounded-2xl overflow-hidden card-hover" data-category="event"
+                    data-aos="fade-up" data-aos-delay="100">
                     <div class="h-44 overflow-hidden relative group cursor-pointer" onclick="openLightbox(this)">
                         <img src="Google_Developer_Group_Event/GDG Event.png" alt="Google Developer Group Event"
                             class="project-screenshot transition-transform duration-500 group-hover:scale-110"
@@ -2509,7 +2548,8 @@
                 </div>
 
                 <!-- Certificate Card 5 -->
-                <div class="cert-card glass rounded-2xl overflow-hidden card-hover" data-category="course" data-aos="fade-up" data-aos-delay="200">
+                <div class="cert-card glass rounded-2xl overflow-hidden card-hover" data-category="course"
+                    data-aos="fade-up" data-aos-delay="200">
                     <div class="h-44 overflow-hidden relative group cursor-pointer" onclick="openLightbox(this)">
                         <img src="Cisco_Academy/Introduction to Cybersecurity.png" alt="Introduction to Cybersecurity"
                             class="project-screenshot transition-transform duration-500 group-hover:scale-110"
@@ -2534,7 +2574,8 @@
                 </div>
 
                 <!-- Certificate Card 6 -->
-                <div class="cert-card glass rounded-2xl overflow-hidden card-hover" data-category="course" data-aos="fade-up" data-aos-delay="300">
+                <div class="cert-card glass rounded-2xl overflow-hidden card-hover" data-category="course"
+                    data-aos="fade-up" data-aos-delay="300">
                     <div class="h-44 overflow-hidden relative group cursor-pointer" onclick="openLightbox(this)">
                         <img src="Cisco_Academy/Cyber Threat Management.png" alt="Cyber Threat Management"
                             class="project-screenshot transition-transform duration-500 group-hover:scale-110"
@@ -2562,7 +2603,8 @@
                 </div>
 
                 <!-- Certificate Card 7 -->
-                <div class="cert-card glass rounded-2xl overflow-hidden card-hover" data-category="test" data-aos="fade-up" data-aos-delay="300">
+                <div class="cert-card glass rounded-2xl overflow-hidden card-hover" data-category="test"
+                    data-aos="fade-up" data-aos-delay="300">
                     <div class="h-44 overflow-hidden relative group cursor-pointer" onclick="openLightbox(this)">
                         <img src="NCAI_NCAT_Test_Participation/Vansh_Makvana_nc_ai_ncat_participation_may_2026_Certificate.png"
                             alt="NCAI NCAT Test Participation"
@@ -2591,7 +2633,8 @@
                 </div>
 
                 <!-- Certificate Card 8 -->
-                <div class="cert-card glass rounded-2xl overflow-hidden card-hover" data-category="event" data-aos="fade-up" data-aos-delay="300">
+                <div class="cert-card glass rounded-2xl overflow-hidden card-hover" data-category="event"
+                    data-aos="fade-up" data-aos-delay="300">
                     <div class="h-44 overflow-hidden relative group cursor-pointer" onclick="openLightbox(this)">
                         <img src="All_India_Career_Summit_Participation/Participation Certificate - Vansh Prafulbhai Makvana (All India Career Summit by Aptus Technologies 28-06-2026).png"
                             alt="All India Career Summit Participation"
@@ -2620,7 +2663,8 @@
                 </div>
 
                 <!-- Certificate Card 9 -->
-                <div class="cert-card glass rounded-2xl overflow-hidden card-hover" data-category="test" data-aos="fade-up" data-aos-delay="300">
+                <div class="cert-card glass rounded-2xl overflow-hidden card-hover" data-category="test"
+                    data-aos="fade-up" data-aos-delay="300">
                     <div class="h-44 overflow-hidden relative group cursor-pointer" onclick="openLightbox(this)">
                         <img src="Geography_GK_test/GK Test of Geography.png" alt="GK Test of Geography"
                             class="project-screenshot transition-transform duration-500 group-hover:scale-110"
@@ -2648,7 +2692,8 @@
                 </div>
 
                 <!-- Certificate Card 10 -->
-                <div class="cert-card glass rounded-2xl overflow-hidden card-hover" data-category="course" data-aos="fade-up" data-aos-delay="300">
+                <div class="cert-card glass rounded-2xl overflow-hidden card-hover" data-category="course"
+                    data-aos="fade-up" data-aos-delay="300">
                     <div class="h-44 overflow-hidden relative group cursor-pointer" onclick="openLightbox(this)">
                         <img src="Internship_Course_Completion/deep-dive-with-infotact-on-sde-mern-full-stack-certificate-for-Vansh Prafulbhai Makvana.jpg"
                             alt="deep dive with infotact on sde mern full stack certificate for Vansh Prafulbhai Makvana"
@@ -2677,7 +2722,8 @@
                 </div>
 
                 <!-- Certificate Card 11 -->
-                <div class="cert-card glass rounded-2xl overflow-hidden card-hover" data-category="test" data-aos="fade-up" data-aos-delay="300">
+                <div class="cert-card glass rounded-2xl overflow-hidden card-hover" data-category="test"
+                    data-aos="fade-up" data-aos-delay="300">
                     <div class="h-44 overflow-hidden relative group cursor-pointer" onclick="openLightbox(this)">
                         <img src="Infotact_Solutions_Test_Participation/Vansh Prafulbhai Makvana Certificate (Infotact Solutions Test Participation).png"
                             alt="Infotact Solutions Test Participation"
@@ -2706,7 +2752,8 @@
                 </div>
 
                 <!-- Certificate Card 12 -->
-                <div class="cert-card glass rounded-2xl overflow-hidden card-hover" data-category="course" data-aos="fade-up" data-aos-delay="300">
+                <div class="cert-card glass rounded-2xl overflow-hidden card-hover" data-category="course"
+                    data-aos="fade-up" data-aos-delay="300">
                     <div class="h-44 overflow-hidden relative group cursor-pointer" onclick="openLightbox(this)">
                         <img src="MinnaLearn/Elements of AI.png" alt="Elements of AI"
                             class="project-screenshot transition-transform duration-500 group-hover:scale-110"
@@ -2734,7 +2781,8 @@
                 </div>
 
                 <!-- Certificate Card 13 -->
-                <div class="cert-card glass rounded-2xl overflow-hidden card-hover" data-category="test" data-aos="fade-up" data-aos-delay="300">
+                <div class="cert-card glass rounded-2xl overflow-hidden card-hover" data-category="test"
+                    data-aos="fade-up" data-aos-delay="300">
                     <div class="h-44 overflow-hidden relative group cursor-pointer" onclick="openLightbox(this)">
                         <img src="Mathematics_Day_Test/National Mathematics Day Test Certificate.png"
                             alt="National Mathematics Day Test Certificate"
@@ -2763,7 +2811,8 @@
                 </div>
 
                 <!-- Certificate Card 14 -->
-                <div class="cert-card glass rounded-2xl overflow-hidden card-hover" data-category="event" data-aos="fade-up" data-aos-delay="300">
+                <div class="cert-card glass rounded-2xl overflow-hidden card-hover" data-category="event"
+                    data-aos="fade-up" data-aos-delay="300">
                     <div class="h-44 overflow-hidden relative group cursor-pointer" onclick="openLightbox(this)">
                         <img src="VVP_Project_Fair_Participation/Vansh_Makvana_VVP_Project_Fair_Participation_Certificate.png"
                             alt="VVP Project Fair Participation Certificate"
@@ -2792,7 +2841,8 @@
                 </div>
 
                 <!-- Certificate Card 15 -->
-                <div class="cert-card glass rounded-2xl overflow-hidden card-hover" data-category="test" data-aos="fade-up" data-aos-delay="300">
+                <div class="cert-card glass rounded-2xl overflow-hidden card-hover" data-category="test"
+                    data-aos="fade-up" data-aos-delay="300">
                     <div class="h-44 overflow-hidden relative group cursor-pointer" onclick="openLightbox(this)">
                         <img src="SLTIET_Computer_Test/Computer Based Test Completion by SLTIET.png"
                             alt="Computer Based Test Completion by SLTIET"
@@ -2821,7 +2871,8 @@
                 </div>
 
                 <!-- Certificate Card 16 -->
-                <div class="cert-card glass rounded-2xl overflow-hidden card-hover" data-category="event" data-aos="fade-up" data-aos-delay="300">
+                <div class="cert-card glass rounded-2xl overflow-hidden card-hover" data-category="event"
+                    data-aos="fade-up" data-aos-delay="300">
                     <div class="h-44 overflow-hidden relative group cursor-pointer" onclick="openLightbox(this)">
                         <img src="College_Tech_Fest_2025/Code Jutsu Event.png" alt="Code Jutsu Event Certificate"
                             class="project-screenshot transition-transform duration-500 group-hover:scale-110"
@@ -2849,7 +2900,8 @@
                 </div>
 
                 <!-- Certificate Card 17 -->
-                <div class="cert-card glass rounded-2xl overflow-hidden card-hover" data-category="event" data-aos="fade-up" data-aos-delay="300">
+                <div class="cert-card glass rounded-2xl overflow-hidden card-hover" data-category="event"
+                    data-aos="fade-up" data-aos-delay="300">
                     <div class="h-44 overflow-hidden relative group cursor-pointer" onclick="openLightbox(this)">
                         <img src="College_Tech_Fest_2025/Counter Strike Event.png" alt="Counter Strike Event"
                             class="project-screenshot transition-transform duration-500 group-hover:scale-110"
@@ -2877,7 +2929,8 @@
                 </div>
 
                 <!-- Certificate Card 18 -->
-                <div class="cert-card glass rounded-2xl overflow-hidden card-hover" data-category="event" data-aos="fade-up" data-aos-delay="300">
+                <div class="cert-card glass rounded-2xl overflow-hidden card-hover" data-category="event"
+                    data-aos="fade-up" data-aos-delay="300">
                     <div class="h-44 overflow-hidden relative group cursor-pointer" onclick="openLightbox(this)">
                         <img src="College_Tech_Fest_2025/Gully Cricket Event.png" alt="Gully Cricket Event"
                             class="project-screenshot transition-transform duration-500 group-hover:scale-110"
@@ -2905,7 +2958,8 @@
                 </div>
 
                 <!-- Certificate Card 19 -->
-                <div class="cert-card glass rounded-2xl overflow-hidden card-hover" data-category="event" data-aos="fade-up" data-aos-delay="300">
+                <div class="cert-card glass rounded-2xl overflow-hidden card-hover" data-category="event"
+                    data-aos="fade-up" data-aos-delay="300">
                     <div class="h-44 overflow-hidden relative group cursor-pointer" onclick="openLightbox(this)">
                         <img src="College_Tech_Fest_2025/Squid AI Event.png" alt="Squid AI Event"
                             class="project-screenshot transition-transform duration-500 group-hover:scale-110"
@@ -2933,7 +2987,8 @@
                 </div>
 
                 <!-- Certificate Card 20 -->
-                <div class="cert-card glass rounded-2xl overflow-hidden card-hover" data-category="other" data-aos="fade-up" data-aos-delay="300">
+                <div class="cert-card glass rounded-2xl overflow-hidden card-hover" data-category="other"
+                    data-aos="fade-up" data-aos-delay="300">
                     <div class="h-44 overflow-hidden relative group cursor-pointer" onclick="openLightbox(this)">
                         <img src="My_Bharat_Portal_Registration_Certificate/My Bharat Portal Registration Certificate.png"
                             alt="My Bharat Portal Registration Certificate"
@@ -2962,7 +3017,8 @@
                 </div>
 
                 <!-- Certificate Card 21 -->
-                <div class="cert-card glass rounded-2xl overflow-hidden card-hover" data-category="other" data-aos="fade-up" data-aos-delay="300">
+                <div class="cert-card glass rounded-2xl overflow-hidden card-hover" data-category="other"
+                    data-aos="fade-up" data-aos-delay="300">
                     <div class="h-44 overflow-hidden relative group cursor-pointer" onclick="openLightbox(this)">
                         <img src="Nasha_Mukt_Bharat_Participation_Certificate/nasha_mukt_certificate.png"
                             alt="Nasha Mukt Bharat Participation Certificate"
@@ -2991,7 +3047,8 @@
                 </div>
 
                 <!-- Certificate Card 22 -->
-                <div class="cert-card glass rounded-2xl overflow-hidden card-hover" data-category="test" data-aos="fade-up" data-aos-delay="300">
+                <div class="cert-card glass rounded-2xl overflow-hidden card-hover" data-category="test"
+                    data-aos="fade-up" data-aos-delay="300">
                     <div class="h-44 overflow-hidden relative group cursor-pointer" onclick="openLightbox(this)">
                         <img src="National_Space_Day_2026_Quiz_Participation/Vansh Makvana.png"
                             alt="National Space Day 2026 Quiz Participation"
@@ -3020,7 +3077,8 @@
                 </div>
 
                 <!-- Certificate Card 23 -->
-                <div class="cert-card glass rounded-2xl overflow-hidden card-hover" data-category="course" data-aos="fade-up" data-aos-delay="300">
+                <div class="cert-card glass rounded-2xl overflow-hidden card-hover" data-category="course"
+                    data-aos="fade-up" data-aos-delay="300">
                     <div class="h-44 overflow-hidden relative group cursor-pointer" onclick="openLightbox(this)">
                         <img src="JioPC_AI_Classroom_AI_FOundation_Course_Completion/AI_FOundation_Course_Completion.jpg"
                             alt="AI FOundation Course Completion"
@@ -3049,7 +3107,8 @@
                 </div>
 
                 <!-- Certificate Card 24 -->
-                <div class="cert-card glass rounded-2xl overflow-hidden card-hover" data-category="internship" data-aos="fade-up" data-aos-delay="300">
+                <div class="cert-card glass rounded-2xl overflow-hidden card-hover" data-category="internship"
+                    data-aos="fade-up" data-aos-delay="300">
                     <div class="h-44 overflow-hidden relative group cursor-pointer" onclick="openLightbox(this)">
                         <img src="3_months_Infotact_Solutions_Internship_Completion/Vansh Prafulbhai Makvana-Internship Completion.jpg"
                             alt="3 months Infotact Solutions Internship Completion"
@@ -3078,7 +3137,8 @@
                 </div>
 
                 <!-- Certificate Card 25 -->
-                <div class="cert-card glass rounded-2xl overflow-hidden card-hover" data-category="internship" data-aos="fade-up" data-aos-delay="300">
+                <div class="cert-card glass rounded-2xl overflow-hidden card-hover" data-category="internship"
+                    data-aos="fade-up" data-aos-delay="300">
                     <div class="h-44 overflow-hidden relative group cursor-pointer" onclick="openLightbox(this)">
                         <img src="3_months_Infotact_Solutions_Internship_Completion/Vansh Prafulbhai Makvana-Training.jpg"
                             alt="3 months Infotact Solutions Internship Training Completion"
@@ -3098,6 +3158,36 @@
                                 <i class="fas fa-check-circle"></i> Verify Credential
                             </a> -->
                             <a href="https://drive.google.com/file/d/1b-dzAAj4LMMHBeigQY41CJDvbHcgmjzj/view?usp=sharing"
+                                target="_blank" rel="noopener"
+                                class="flex items-center gap-1 px-3 py-2 rounded-lg glass text-gray-300 text-xs font-medium hover:text-white transition-colors">
+                                <i class="fas fa-expand"></i> Full Size
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certificate Card 26 -->
+                <div class="cert-card glass rounded-2xl overflow-hidden card-hover" data-category="internship"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <div class="h-44 overflow-hidden relative group cursor-pointer" onclick="openLightbox(this)">
+                        <img src="G3Q_AI_Test_Week_1_Taluka_Level_Participation/G3Q-certificate-G3QC1200920260437.png"
+                            alt="G3Q AI Test Week 1 Taluka Level Participation"
+                            class="project-screenshot transition-transform duration-500 group-hover:scale-110"
+                            loading="lazy" decoding="async" onerror="this.src='https://placehold.co/600x400'">
+                        <div
+                            class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <i class="fas fa-search-plus text-white text-2xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-white font-bold mb-1">G3Q AI Test Week 1 Taluka Level Participation</h3>
+                        <p class="text-gray-400 text-sm mb-3">G3Q - 20th September 2026</p>
+                        <div class="flex items-center gap-2">
+                            <!-- <a href="#" target="_blank" rel="noopener"
+                                class="flex items-center gap-1 px-3 py-2 rounded-lg bg-blue-500/15 text-blue-400 text-xs font-medium hover:bg-blue-500/25 transition-colors">
+                                <i class="fas fa-check-circle"></i> Verify Credential
+                            </a> -->
+                            <a href="https://drive.google.com/file/d/1Eera9GzHKuiWklIKFt_fY6SwCpbUVp3R/view?usp=sharing"
                                 target="_blank" rel="noopener"
                                 class="flex items-center gap-1 px-3 py-2 rounded-lg glass text-gray-300 text-xs font-medium hover:text-white transition-colors">
                                 <i class="fas fa-expand"></i> Full Size
@@ -3304,7 +3394,7 @@
     <div id="recruiterModal" class="modal-overlay" onclick="closeRecruiterModal(event)">
         <div class="modal-content glass-strong rounded-3xl p-6 sm:p-8 max-w-lg mx-4 text-center"
             onclick="event.stopPropagation()">
-            
+
             <!-- Scrollable Content Area -->
             <div class="recruiter-scroll-area pr-1">
                 <div
@@ -3331,7 +3421,8 @@
                         <i class="fas fa-code text-cyan-400 mt-1"></i>
                         <div>
                             <p class="text-white font-semibold text-sm">Core Skills</p>
-                            <p class="text-gray-400 text-sm">Java, Basic Python, C, HTML, CSS, JavaScript, Bootstrap, React,
+                            <p class="text-gray-400 text-sm">Java, Basic Python, C, HTML, CSS, JavaScript, Bootstrap,
+                                React,
                                 Node.js, Flutter, MongoDB</p>
                         </div>
                     </div>
@@ -3339,7 +3430,8 @@
                         <i class="fas fa-briefcase text-purple-400 mt-1"></i>
                         <div>
                             <p class="text-white font-semibold text-sm">Experience</p>
-                            <p class="text-gray-400 text-sm">3 months internship at Infotact Solutions company in MERN Stack
+                            <p class="text-gray-400 text-sm">3 months internship at Infotact Solutions company in MERN
+                                Stack
                                 Web Development</p>
                         </div>
                     </div>
